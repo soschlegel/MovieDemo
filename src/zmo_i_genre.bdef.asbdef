@@ -1,0 +1,15 @@
+managed implementation in class zbp_mo_i_genre unique;
+strict ( 2 );
+
+define behavior for ZMO_I_GENRE alias Gene
+persistent table zmo_a_genre
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+ field ( readonly : update ) id;
+
+  create;
+  update;
+  delete;
+}

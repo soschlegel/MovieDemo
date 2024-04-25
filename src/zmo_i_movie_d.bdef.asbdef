@@ -1,0 +1,36 @@
+managed;
+strict ( 2 );
+with draft;
+
+define behavior for ZMO_I_MOVIE_D alias MovieD
+implementation in class zbp_mo_i_movie_d unique
+persistent table zmo_a_movie
+draft table zmo_d_movie_d
+lock master
+total etag LastChangedAt
+authorization master ( instance )
+etag master LastChangedAt
+{
+  field ( numbering : managed, readonly ) Guid;
+  field ( readonly ) LastChangedAt;
+
+  create;
+  update;
+  delete;
+
+  mapping for zmo_a_movie corresponding
+    {
+      ReleaseYear   = release_year;
+      Title         = title;
+      Director      = director;
+      GenreId       = genre_id;
+      LastChangedAt = last_changed_at;
+    }
+
+
+  draft action Resume with additional implementation;
+  draft action Edit;
+  draft action Activate optimized;
+  draft action Discard;
+  draft determine action Prepare;
+}

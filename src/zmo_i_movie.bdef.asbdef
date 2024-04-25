@@ -1,0 +1,25 @@
+managed implementation in class zbp_mo_i_movie unique;
+strict ( 2 );
+
+define behavior for ZMO_I_MOVIE alias Movie
+persistent table zmo_a_movie
+lock master
+authorization master ( instance )
+
+//etag master <field_name>
+{
+  field ( numbering : managed, readonly  ) Guid;
+  field ( readonly ) LastChangedAt;
+  mapping for zmo_a_movie corresponding
+    {
+    Guid = guid;
+      ReleaseYear   = release_year;
+      Title         = title;
+      Director      = director;
+      GenreId       = genre_id;
+      LastChangedAt = last_changed_at;
+    }
+  create;
+  update;
+  delete;
+}

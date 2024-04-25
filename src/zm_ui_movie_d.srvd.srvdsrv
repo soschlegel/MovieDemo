@@ -1,0 +1,5 @@
+@EndUserText.label: 'Service for Draft Movie'
+define service ZM_UI_MOVIE_D {
+  expose ZMO_C_MOVIE_ADMIN_D;
+  expose ZMO_I_GENRE;
+}
