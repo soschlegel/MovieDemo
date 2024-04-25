@@ -1,634 +1,297 @@
 <?xml version="1.0" encoding="utf-8"?>
-<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
-    <edmx:Reference Uri="..hana.ondemand.com/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_AGGREGATION',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
-        <edmx:Include Namespace="Org.OData.Aggregation.V1" Alias="Aggregation"/>
-    </edmx:Reference>
-    <edmx:Reference Uri="..hana.ondemand.com/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
-        <edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/>
-    </edmx:Reference>
-    <edmx:Reference Uri="..hana.ondemand.com/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
-        <edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="Capabilities"/>
-    </edmx:Reference>
-    <edmx:Reference Uri="..hana.ondemand.com/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CODELIST',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
-        <edmx:Include Namespace="com.sap.vocabularies.CodeList.v1" Alias="SAP__CodeList"/>
-    </edmx:Reference>
-    <edmx:Reference Uri="..hana.ondemand.com/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
-        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/>
-        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="SAP__common"/>
-    </edmx:Reference>
-    <edmx:Reference Uri="..hana.ondemand.com/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='LOCAL')/$value">
         <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
     </edmx:Reference>
-    <edmx:Reference Uri="..hana.ondemand.com/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CORE',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
-        <edmx:Include Namespace="Org.OData.Core.V1" Alias="SAP__core"/>
-    </edmx:Reference>
-    <edmx:Reference Uri="..hana.ondemand.com/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_MEASURES',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
-        <edmx:Include Namespace="Org.OData.Measures.V1" Alias="Measures"/>
-    </edmx:Reference>
-    <edmx:Reference Uri="..hana.ondemand.com/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PDF',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
-        <edmx:Include Namespace="com.sap.vocabularies.PDF.v1" Alias="SAP__PDF"/>
-    </edmx:Reference>
-    <edmx:Reference Uri="..hana.ondemand.com/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='LOCAL')/$value">
         <edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/>
     </edmx:Reference>
-    <edmx:Reference Uri="..hana.ondemand.com/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
-        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/>
     </edmx:Reference>
-    <edmx:Reference Uri="..hana.ondemand.com/sap/opu/odata/iwfnd/catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='')/$value" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
-        <edmx:Include Namespace="Org.OData.Validation.V1" Alias="Validation"/>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="SAP__common"/>
     </edmx:Reference>
-    <edmx:DataServices m:DataServiceVersion="2.0">
-        <Schema Namespace="cds_zm_ui_movie_d" xml:lang="en" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
-            <EntityType Name="I_DraftAdministrativeDataType" sap:label="Draft Administration Data" sap:content-version="1">
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_MEASURES',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Measures.V1" Alias="SAP__measures"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CORE',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Core.V1" Alias="SAP__core"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="SAP__capabilities"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_AGGREGATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Aggregation.V1" Alias="SAP__aggregation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Validation.V1" Alias="SAP__validation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CODELIST',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.CodeList.v1" Alias="SAP__CodeList"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="SAP__UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_HTML5',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.HTML5.v1" Alias="SAP__HTML5"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PDF',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.PDF.v1" Alias="SAP__PDF"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_SESSION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Session.v1" Alias="SAP__session"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_HIERARCHY',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Hierarchy.v1" Alias="SAP__hierarchy"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="com.sap.gateway.srvd.zm_ui_movie_d.v0001" Alias="SAP__self">
+            <Annotation Term="SAP__core.SchemaVersion" String="1.0.0"/>
+            <EntityType Name="ZMO_I_GENREType">
+                <Key>
+                    <PropertyRef Name="Id"/>
+                </Key>
+                <Property Name="Id" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="100"/>
+                <Property Name="__EntityControl" Type="com.sap.gateway.srvd.zm_ui_movie_d.v0001.EntityControl"/>
+                <Property Name="SAP__Messages" Type="Collection(com.sap.gateway.srvd.zm_ui_movie_d.v0001.SAP__Message)" Nullable="false"/>
+            </EntityType>
+            <EntityType Name="I_DraftAdministrativeDataType">
                 <Key>
                     <PropertyRef Name="DraftUUID"/>
                     <PropertyRef Name="DraftEntityType"/>
                 </Key>
-                <Property Name="DraftUUID" Type="Edm.Guid" Nullable="false" sap:label="Draft (Technical ID)"/>
-                <Property Name="DraftEntityType" Type="Edm.String" Nullable="false" MaxLength="30" sap:display-format="UpperCase" sap:label="Draft Entity ID"/>
-                <Property Name="CreationDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:filter-restriction="interval" sap:label="Draft Created On"/>
-                <Property Name="CreatedByUser" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:text="CreatedByUserDescription" sap:label="Draft Created By" sap:value-list="standard"/>
-                <Property Name="LastChangeDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:filter-restriction="interval" sap:label="Draft Last Changed On"/>
-                <Property Name="LastChangedByUser" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:text="LastChangedByUserDescription" sap:label="Draft Last Changed By" sap:value-list="standard"/>
-                <Property Name="DraftAccessType" Type="Edm.String" MaxLength="1" sap:display-format="UpperCase" sap:label="Draft Access Type"/>
-                <Property Name="ProcessingStartDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Draft In Process Since"/>
-                <Property Name="InProcessByUser" Type="Edm.String" MaxLength="12" sap:display-format="UpperCase" sap:text="InProcessByUserDescription" sap:label="Draft In Process By"/>
-                <Property Name="DraftIsKeptByUser" Type="Edm.Boolean" sap:label="Draft Is Kept By User"/>
-                <Property Name="EnqueueStartDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Draft Locked Since"/>
-                <Property Name="DraftIsCreatedByMe" Type="Edm.Boolean" sap:label="Draft Created By Me"/>
-                <Property Name="DraftIsLastChangedByMe" Type="Edm.Boolean" sap:label="Draft Last Changed By Me"/>
-                <Property Name="DraftIsProcessedByMe" Type="Edm.Boolean" sap:label="Draft In Process By Me"/>
-                <Property Name="CreatedByUserDescription" Type="Edm.String" MaxLength="80" sap:label="Draft Created By (Description)"/>
-                <Property Name="LastChangedByUserDescription" Type="Edm.String" MaxLength="80" sap:label="Draft Last Changed By (Description)"/>
-                <Property Name="InProcessByUserDescription" Type="Edm.String" MaxLength="80" sap:label="Draft In Process By (Description)"/>
+                <Property Name="DraftUUID" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="DraftEntityType" Type="Edm.String" Nullable="false" MaxLength="30"/>
+                <Property Name="CreationDateTime" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="CreatedByUser" Type="Edm.String" Nullable="false" MaxLength="12"/>
+                <Property Name="LastChangeDateTime" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="LastChangedByUser" Type="Edm.String" Nullable="false" MaxLength="12"/>
+                <Property Name="DraftAccessType" Type="Edm.String" Nullable="false" MaxLength="1"/>
+                <Property Name="ProcessingStartDateTime" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="InProcessByUser" Type="Edm.String" Nullable="false" MaxLength="12"/>
+                <Property Name="DraftIsKeptByUser" Type="Edm.Boolean" Nullable="false"/>
+                <Property Name="EnqueueStartDateTime" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="DraftIsCreatedByMe" Type="Edm.Boolean" Nullable="false"/>
+                <Property Name="DraftIsLastChangedByMe" Type="Edm.Boolean" Nullable="false"/>
+                <Property Name="DraftIsProcessedByMe" Type="Edm.Boolean" Nullable="false"/>
+                <Property Name="CreatedByUserDescription" Type="Edm.String" Nullable="false" MaxLength="80"/>
+                <Property Name="LastChangedByUserDescription" Type="Edm.String" Nullable="false" MaxLength="80"/>
+                <Property Name="InProcessByUserDescription" Type="Edm.String" Nullable="false" MaxLength="80"/>
             </EntityType>
-            <EntityType Name="I_DraftAdministrativeUserVHType" sap:label="Draft User" sap:value-list="true" sap:content-version="1">
-                <Key>
-                    <PropertyRef Name="UserID"/>
-                </Key>
-                <Property Name="UserID" Type="Edm.String" Nullable="false" MaxLength="12" sap:display-format="UpperCase" sap:text="UserDescription" sap:label="User" sap:quickinfo="User Name in User Master Record"/>
-                <Property Name="UserDescription" Type="Edm.String" MaxLength="80" sap:label="Description" sap:quickinfo="User Description"/>
-            </EntityType>
-            <EntityType Name="ZMO_C_MOVIE_ADMIN_DType" sap:label="Movie Draft Projection View for Admins" sap:content-version="1">
+            <EntityType Name="ZMO_C_MOVIE_ADMIN_DType">
                 <Key>
                     <PropertyRef Name="Guid"/>
                     <PropertyRef Name="IsActiveEntity"/>
                 </Key>
-                <Property Name="Edit_ac" Type="Edm.Boolean" sap:label="Dyn. Action Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="Delete_mc" Type="Edm.Boolean" sap:label="Dyn. Method Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="Update_mc" Type="Edm.Boolean" sap:label="Dyn. Method Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="Guid" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:quickinfo="16 Byte UUID in 16 Bytes (Raw Format)" sap:creatable="false" sap:updatable="false"/>
-                <Property Name="Title" Type="Edm.String" MaxLength="100"/>
-                <Property Name="ReleaseYear" Type="Edm.DateTime" Precision="0" sap:display-format="Date"/>
-                <Property Name="Director" Type="Edm.String" MaxLength="100"/>
-                <Property Name="GenreId" Type="Edm.Int32" sap:text="GenreName" sap:value-list="standard"/>
-                <Property Name="GenreName" Type="Edm.String" MaxLength="100"/>
-                <Property Name="LastChangedAt" Type="Edm.DateTimeOffset" Precision="7" sap:label="Changed On" sap:quickinfo="Local Instance Last Change Date Time" sap:creatable="false" sap:updatable="false"/>
-                <Property Name="HasDraftEntity" Type="Edm.Boolean" sap:label="Has Draft" sap:creatable="false" sap:updatable="false"/>
-                <Property Name="DraftEntityCreationDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Draft Created On" sap:creatable="false" sap:updatable="false"/>
-                <Property Name="DraftEntityLastChangeDateTime" Type="Edm.DateTimeOffset" Precision="7" sap:label="Draft Last Changed On" sap:creatable="false" sap:updatable="false"/>
-                <Property Name="HasActiveEntity" Type="Edm.Boolean" sap:label="Has active" sap:creatable="false" sap:updatable="false"/>
-                <Property Name="IsActiveEntity" Type="Edm.Boolean" Nullable="false" sap:label="Is active" sap:creatable="false" sap:updatable="false"/>
-                <NavigationProperty Name="DraftAdministrativeData" Relationship="cds_zm_ui_movie_d.assoc_84E32A83A7C404A013BD2F3C31897034" FromRole="FromRole_assoc_84E32A83A7C404A013BD2F3C31897034" ToRole="ToRole_assoc_84E32A83A7C404A013BD2F3C31897034"/>
-                <NavigationProperty Name="SiblingEntity" Relationship="cds_zm_ui_movie_d.assoc_F2C75C331A19ACA9C2919013A6D7AEC1" FromRole="FromRole_assoc_F2C75C331A19ACA9C2919013A6D7AEC1" ToRole="ToRole_assoc_F2C75C331A19ACA9C2919013A6D7AEC1"/>
-                <NavigationProperty Name="to_Genre" Relationship="cds_zm_ui_movie_d.assoc_9FF6BDD2A7E6856D14617358ED379E03" FromRole="FromRole_assoc_9FF6BDD2A7E6856D14617358ED379E03" ToRole="ToRole_assoc_9FF6BDD2A7E6856D14617358ED379E03"/>
-                <NavigationProperty Name="to_MovieByGenre" Relationship="cds_zm_ui_movie_d.assoc_DD225A25FBB1EC85DBD210D77BE16796" FromRole="FromRole_assoc_DD225A25FBB1EC85DBD210D77BE16796" ToRole="ToRole_assoc_DD225A25FBB1EC85DBD210D77BE16796"/>
+                <Property Name="Guid" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="Title" Type="Edm.String" Nullable="false" MaxLength="100"/>
+                <Property Name="ReleaseYear" Type="Edm.Date"/>
+                <Property Name="Director" Type="Edm.String" Nullable="false" MaxLength="100"/>
+                <Property Name="GenreId" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="GenreName" Type="Edm.String" Nullable="false" MaxLength="100"/>
+                <Property Name="LastChangedAt" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="HasDraftEntity" Type="Edm.Boolean" Nullable="false"/>
+                <Property Name="DraftEntityCreationDateTime" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="DraftEntityLastChangeDateTime" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="HasActiveEntity" Type="Edm.Boolean" Nullable="false"/>
+                <Property Name="IsActiveEntity" Type="Edm.Boolean" Nullable="false"/>
+                <Property Name="__EntityControl" Type="com.sap.gateway.srvd.zm_ui_movie_d.v0001.EntityControl"/>
+                <Property Name="__OperationControl" Type="com.sap.gateway.srvd.zm_ui_movie_d.v0001.ZMO_C_MOVIE_ADMIN_DOperationControl"/>
+                <Property Name="SAP__Messages" Type="Collection(com.sap.gateway.srvd.zm_ui_movie_d.v0001.SAP__Message)" Nullable="false"/>
+                <NavigationProperty Name="DraftAdministrativeData" Type="com.sap.gateway.srvd.zm_ui_movie_d.v0001.I_DraftAdministrativeDataType"/>
+                <NavigationProperty Name="SiblingEntity" Type="com.sap.gateway.srvd.zm_ui_movie_d.v0001.ZMO_C_MOVIE_ADMIN_DType"/>
+                <NavigationProperty Name="_Genre" Type="com.sap.gateway.srvd.zm_ui_movie_d.v0001.ZMO_I_GENREType"/>
+                <NavigationProperty Name="_MovieByGenre" Type="Collection(com.sap.gateway.srvd.zm_ui_movie_d.v0001.ZMO_C_MOVIE_ADMIN_DType)"/>
             </EntityType>
-            <EntityType Name="ZMO_I_GENREType" sap:label="Genre View CDS Data Model" sap:content-version="1">
-                <Key>
-                    <PropertyRef Name="Id"/>
-                </Key>
-                <Property Name="Delete_mc" Type="Edm.Boolean" sap:label="Dyn. Method Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="Update_mc" Type="Edm.Boolean" sap:label="Dyn. Method Control" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="Id" Type="Edm.Int32" Nullable="false" sap:updatable="false"/>
-                <Property Name="Name" Type="Edm.String" MaxLength="100"/>
-            </EntityType>
-            <EntityType Name="SAP__Currency" sap:content-version="1">
-                <Key>
-                    <PropertyRef Name="CurrencyCode"/>
-                </Key>
-                <Property Name="CurrencyCode" Type="Edm.String" Nullable="false" MaxLength="5" sap:label="Currency" sap:semantics="currency-code"/>
-                <Property Name="ISOCode" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="ISO code"/>
-                <Property Name="Text" Type="Edm.String" Nullable="false" MaxLength="15" sap:label="Short text"/>
-                <Property Name="DecimalPlaces" Type="Edm.Byte" Nullable="false" sap:label="Decimals"/>
-            </EntityType>
-            <EntityType Name="SAP__UnitOfMeasure" sap:content-version="1">
-                <Key>
-                    <PropertyRef Name="UnitCode"/>
-                </Key>
-                <Property Name="UnitCode" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Internal UoM" sap:semantics="unit-of-measure"/>
-                <Property Name="ISOCode" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="ISO Code"/>
-                <Property Name="ExternalCode" Type="Edm.String" Nullable="false" MaxLength="3" sap:label="Commercial"/>
-                <Property Name="Text" Type="Edm.String" Nullable="false" MaxLength="30" sap:label="Meas. Unit Text"/>
-                <Property Name="DecimalPlaces" Type="Edm.Int16" sap:label="Decimal Places"/>
-            </EntityType>
-            <EntityType Name="SAP__DocumentDescription" sap:content-version="1">
-                <Key>
-                    <PropertyRef Name="Id"/>
-                </Key>
-                <Property Name="Id" Type="Edm.Guid" Nullable="false" sap:label="UUID"/>
-                <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="12"/>
-                <Property Name="CreatedAt" Type="Edm.DateTime" Nullable="false" Precision="0" sap:label="Time Stamp"/>
-                <Property Name="FileName" Type="Edm.String" Nullable="false" MaxLength="256"/>
-                <Property Name="Title" Type="Edm.String" Nullable="false" MaxLength="256"/>
-                <NavigationProperty Name="Format" Relationship="cds_zm_ui_movie_d.to_format" FromRole="FromRole_to_format" ToRole="ToRole_to_format"/>
-                <NavigationProperty Name="TableColumns" Relationship="cds_zm_ui_movie_d.to_tablecolumns" FromRole="FromRole_to_tablecolumns" ToRole="ToRole_to_tablecolumns"/>
-                <NavigationProperty Name="CoverPage" Relationship="cds_zm_ui_movie_d.to_coverpage" FromRole="FromRole_to_coverpage" ToRole="ToRole_to_coverpage"/>
-                <NavigationProperty Name="Signature" Relationship="cds_zm_ui_movie_d.to_signature" FromRole="FromRole_to_signature" ToRole="ToRole_to_signature"/>
-                <NavigationProperty Name="PDFStandard" Relationship="cds_zm_ui_movie_d.to_pdfstandard" FromRole="FromRole_to_pdfstandard" ToRole="ToRole_to_pdfstandard"/>
-                <NavigationProperty Name="Hierarchy" Relationship="cds_zm_ui_movie_d.to_Hierarchy" FromRole="FromRole_to_Hierarchy" ToRole="ToRole_to_Hierarchy"/>
-                <NavigationProperty Name="Header" Relationship="cds_zm_ui_movie_d.to_header" FromRole="FromRole_to_header" ToRole="ToRole_to_header"/>
-                <NavigationProperty Name="Footer" Relationship="cds_zm_ui_movie_d.to_Footer" FromRole="FromRole_to_Footer" ToRole="ToRole_to_Footer"/>
-            </EntityType>
-            <EntityType Name="SAP__Format" sap:content-version="1">
-                <Key>
-                    <PropertyRef Name="Id"/>
-                </Key>
-                <Property Name="FitToPage" Type="cds_zm_ui_movie_d.SAP__FitToPage" Nullable="false"/>
-                <Property Name="Id" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="FontSize" Type="Edm.Int32" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="Orientation" Type="Edm.String" Nullable="false" MaxLength="10" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="PaperSize" Type="Edm.String" Nullable="false" MaxLength="10" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="BorderSize" Type="Edm.Int32" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="MarginSize" Type="Edm.Int32" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="FontName" Type="Edm.String" Nullable="false" MaxLength="255" sap:label="Font Name" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="Padding" Type="Edm.Int32" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-            </EntityType>
-            <EntityType Name="SAP__PDFStandard" sap:content-version="1">
-                <Key>
-                    <PropertyRef Name="Id"/>
-                </Key>
-                <Property Name="Id" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="UsePDFAConformance" Type="Edm.Boolean" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="DoEnableAccessibility" Type="Edm.Boolean" Nullable="false" sap:label="Indicator" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-            </EntityType>
-            <EntityType Name="SAP__TableColumns" sap:content-version="1">
-                <Key>
-                    <PropertyRef Name="Id"/>
-                    <PropertyRef Name="Name"/>
-                    <PropertyRef Name="Header"/>
-                </Key>
-                <Property Name="Format" Type="cds_zm_ui_movie_d.SAP__TableColumnFormat" Nullable="false"/>
-                <Property Name="Id" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="256" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="Header" Type="Edm.String" Nullable="false" MaxLength="256" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="HorizontalAlignment" Type="Edm.String" Nullable="false" MaxLength="10" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-            </EntityType>
-            <EntityType Name="SAP__CoverPage" sap:content-version="1">
-                <Key>
-                    <PropertyRef Name="Title"/>
-                    <PropertyRef Name="Id"/>
-                    <PropertyRef Name="Name"/>
-                </Key>
-                <Property Name="Title" Type="Edm.String" Nullable="false" MaxLength="256" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="Id" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="256" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="Value" Type="Edm.String" Nullable="false" MaxLength="256" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-            </EntityType>
-            <EntityType Name="SAP__Signature" sap:content-version="1">
-                <Key>
-                    <PropertyRef Name="Id"/>
-                </Key>
-                <Property Name="Id" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="DoSign" Type="Edm.Boolean" Nullable="false" sap:label="Indicator" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="Reason" Type="Edm.String" Nullable="false" MaxLength="256" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-            </EntityType>
-            <EntityType Name="SAP__Hierarchy" sap:content-version="1">
-                <Key>
-                    <PropertyRef Name="Id"/>
-                </Key>
-                <Property Name="Id" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="DistanceFromRootElement" Type="Edm.String" Nullable="false" MaxLength="256" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="DrillStateElement" Type="Edm.String" Nullable="false" MaxLength="256" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-            </EntityType>
-            <EntityType Name="SAP__PDFHeader" sap:content-version="1">
-                <Key>
-                    <PropertyRef Name="Id"/>
-                </Key>
-                <Property Name="Right" Type="cds_zm_ui_movie_d.SAP__HeaderFooterField" Nullable="false"/>
-                <Property Name="Left" Type="cds_zm_ui_movie_d.SAP__HeaderFooterField" Nullable="false"/>
-                <Property Name="Center" Type="cds_zm_ui_movie_d.SAP__HeaderFooterField" Nullable="false"/>
-                <Property Name="Id" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-            </EntityType>
-            <EntityType Name="SAP__PDFFooter" sap:content-version="1">
-                <Key>
-                    <PropertyRef Name="Id"/>
-                </Key>
-                <Property Name="Right" Type="cds_zm_ui_movie_d.SAP__HeaderFooterField" Nullable="false"/>
-                <Property Name="Left" Type="cds_zm_ui_movie_d.SAP__HeaderFooterField" Nullable="false"/>
-                <Property Name="Center" Type="cds_zm_ui_movie_d.SAP__HeaderFooterField" Nullable="false"/>
-                <Property Name="Id" Type="Edm.Guid" Nullable="false" sap:label="UUID" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-            </EntityType>
-            <EntityType Name="SAP__ValueHelp" sap:content-version="1">
-                <Key>
-                    <PropertyRef Name="VALUEHELP"/>
-                </Key>
-                <Property Name="VALUEHELP" Type="Edm.String" Nullable="false"/>
-                <Property Name="FIELD_VALUE" Type="Edm.String" Nullable="false" MaxLength="10"/>
-                <Property Name="DESCRIPTION" Type="Edm.String"/>
-            </EntityType>
-            <ComplexType Name="DummyFunctionImportResult">
-                <Property Name="IsInvalid" Type="Edm.Boolean" sap:label="TRUE"/>
+            <ComplexType Name="ZMO_C_MOVIE_ADMIN_DOperationControl">
+                <Property Name="Edit" Type="Edm.Boolean" Nullable="false"/>
             </ComplexType>
-            <ComplexType Name="SAP__FitToPage">
-                <Property Name="ErrorRecoveryBehavior" Type="Edm.String" Nullable="false" MaxLength="8" sap:label="Error behavior" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="IsEnabled" Type="Edm.Boolean" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="MinimumFontSize" Type="Edm.Int32" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            <ComplexType Name="EntityControl">
+                <Property Name="Deletable" Type="Edm.Boolean" Nullable="false"/>
+                <Property Name="Updatable" Type="Edm.Boolean" Nullable="false"/>
             </ComplexType>
-            <ComplexType Name="SAP__TableColumnFormat">
-                <Property Name="DisplayFormat" Type="Edm.String" Nullable="false" MaxLength="40" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="IANATimezone" Type="Edm.String" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-                <Property Name="IANATimezoneProperty" Type="Edm.String" Nullable="false" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
+            <ComplexType Name="SAP__Message">
+                <Property Name="code" Type="Edm.String" Nullable="false"/>
+                <Property Name="message" Type="Edm.String" Nullable="false"/>
+                <Property Name="target" Type="Edm.String"/>
+                <Property Name="additionalTargets" Type="Collection(Edm.String)" Nullable="false"/>
+                <Property Name="transition" Type="Edm.Boolean" Nullable="false"/>
+                <Property Name="numericSeverity" Type="Edm.Byte" Nullable="false"/>
+                <Property Name="longtextUrl" Type="Edm.String"/>
             </ComplexType>
-            <ComplexType Name="SAP__HeaderFooterField">
-                <Property Name="Type" Type="Edm.String" Nullable="false" MaxLength="256" sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/>
-            </ComplexType>
-            <Association Name="to_format" sap:content-version="1">
-                <End Type="cds_zm_ui_movie_d.SAP__DocumentDescription" Multiplicity="1" Role="FromRole_to_format"/>
-                <End Type="cds_zm_ui_movie_d.SAP__Format" Multiplicity="1" Role="ToRole_to_format"/>
-                <ReferentialConstraint>
-                    <Principal Role="FromRole_to_format">
-                        <PropertyRef Name="Id"/>
-                    </Principal>
-                    <Dependent Role="ToRole_to_format">
-                        <PropertyRef Name="Id"/>
-                    </Dependent>
-                </ReferentialConstraint>
-            </Association>
-            <Association Name="to_tablecolumns" sap:content-version="1">
-                <End Type="cds_zm_ui_movie_d.SAP__DocumentDescription" Multiplicity="1" Role="FromRole_to_tablecolumns"/>
-                <End Type="cds_zm_ui_movie_d.SAP__TableColumns" Multiplicity="*" Role="ToRole_to_tablecolumns"/>
-                <ReferentialConstraint>
-                    <Principal Role="FromRole_to_tablecolumns">
-                        <PropertyRef Name="Id"/>
-                    </Principal>
-                    <Dependent Role="ToRole_to_tablecolumns">
-                        <PropertyRef Name="Id"/>
-                    </Dependent>
-                </ReferentialConstraint>
-            </Association>
-            <Association Name="to_coverpage" sap:content-version="1">
-                <End Type="cds_zm_ui_movie_d.SAP__DocumentDescription" Multiplicity="1" Role="FromRole_to_coverpage"/>
-                <End Type="cds_zm_ui_movie_d.SAP__CoverPage" Multiplicity="*" Role="ToRole_to_coverpage"/>
-                <ReferentialConstraint>
-                    <Principal Role="FromRole_to_coverpage">
-                        <PropertyRef Name="Id"/>
-                    </Principal>
-                    <Dependent Role="ToRole_to_coverpage">
-                        <PropertyRef Name="Id"/>
-                    </Dependent>
-                </ReferentialConstraint>
-            </Association>
-            <Association Name="to_signature" sap:content-version="1">
-                <End Type="cds_zm_ui_movie_d.SAP__DocumentDescription" Multiplicity="1" Role="FromRole_to_signature"/>
-                <End Type="cds_zm_ui_movie_d.SAP__Signature" Multiplicity="1" Role="ToRole_to_signature"/>
-                <ReferentialConstraint>
-                    <Principal Role="FromRole_to_signature">
-                        <PropertyRef Name="Id"/>
-                    </Principal>
-                    <Dependent Role="ToRole_to_signature">
-                        <PropertyRef Name="Id"/>
-                    </Dependent>
-                </ReferentialConstraint>
-            </Association>
-            <Association Name="to_pdfstandard" sap:content-version="1">
-                <End Type="cds_zm_ui_movie_d.SAP__DocumentDescription" Multiplicity="1" Role="FromRole_to_pdfstandard"/>
-                <End Type="cds_zm_ui_movie_d.SAP__PDFStandard" Multiplicity="1" Role="ToRole_to_pdfstandard"/>
-                <ReferentialConstraint>
-                    <Principal Role="FromRole_to_pdfstandard">
-                        <PropertyRef Name="Id"/>
-                    </Principal>
-                    <Dependent Role="ToRole_to_pdfstandard">
-                        <PropertyRef Name="Id"/>
-                    </Dependent>
-                </ReferentialConstraint>
-            </Association>
-            <Association Name="to_Hierarchy" sap:content-version="1">
-                <End Type="cds_zm_ui_movie_d.SAP__DocumentDescription" Multiplicity="1" Role="FromRole_to_Hierarchy"/>
-                <End Type="cds_zm_ui_movie_d.SAP__Hierarchy" Multiplicity="1" Role="ToRole_to_Hierarchy"/>
-                <ReferentialConstraint>
-                    <Principal Role="FromRole_to_Hierarchy">
-                        <PropertyRef Name="Id"/>
-                    </Principal>
-                    <Dependent Role="ToRole_to_Hierarchy">
-                        <PropertyRef Name="Id"/>
-                    </Dependent>
-                </ReferentialConstraint>
-            </Association>
-            <Association Name="to_header" sap:content-version="1">
-                <End Type="cds_zm_ui_movie_d.SAP__DocumentDescription" Multiplicity="1" Role="FromRole_to_header"/>
-                <End Type="cds_zm_ui_movie_d.SAP__PDFHeader" Multiplicity="1" Role="ToRole_to_header"/>
-                <ReferentialConstraint>
-                    <Principal Role="FromRole_to_header">
-                        <PropertyRef Name="Id"/>
-                    </Principal>
-                    <Dependent Role="ToRole_to_header">
-                        <PropertyRef Name="Id"/>
-                    </Dependent>
-                </ReferentialConstraint>
-            </Association>
-            <Association Name="to_Footer" sap:content-version="1">
-                <End Type="cds_zm_ui_movie_d.SAP__DocumentDescription" Multiplicity="1" Role="FromRole_to_Footer"/>
-                <End Type="cds_zm_ui_movie_d.SAP__PDFFooter" Multiplicity="1" Role="ToRole_to_Footer"/>
-                <ReferentialConstraint>
-                    <Principal Role="FromRole_to_Footer">
-                        <PropertyRef Name="Id"/>
-                    </Principal>
-                    <Dependent Role="ToRole_to_Footer">
-                        <PropertyRef Name="Id"/>
-                    </Dependent>
-                </ReferentialConstraint>
-            </Association>
-            <Association Name="assoc_F2C75C331A19ACA9C2919013A6D7AEC1" sap:content-version="1">
-                <End Type="cds_zm_ui_movie_d.ZMO_C_MOVIE_ADMIN_DType" Multiplicity="1" Role="FromRole_assoc_F2C75C331A19ACA9C2919013A6D7AEC1"/>
-                <End Type="cds_zm_ui_movie_d.ZMO_C_MOVIE_ADMIN_DType" Multiplicity="0..1" Role="ToRole_assoc_F2C75C331A19ACA9C2919013A6D7AEC1"/>
-            </Association>
-            <Association Name="assoc_9FF6BDD2A7E6856D14617358ED379E03" sap:content-version="1">
-                <End Type="cds_zm_ui_movie_d.ZMO_C_MOVIE_ADMIN_DType" Multiplicity="1" Role="FromRole_assoc_9FF6BDD2A7E6856D14617358ED379E03"/>
-                <End Type="cds_zm_ui_movie_d.ZMO_I_GENREType" Multiplicity="0..1" Role="ToRole_assoc_9FF6BDD2A7E6856D14617358ED379E03"/>
-                <ReferentialConstraint>
-                    <Principal Role="ToRole_assoc_9FF6BDD2A7E6856D14617358ED379E03">
-                        <PropertyRef Name="Id"/>
-                    </Principal>
-                    <Dependent Role="FromRole_assoc_9FF6BDD2A7E6856D14617358ED379E03">
-                        <PropertyRef Name="GenreId"/>
-                    </Dependent>
-                </ReferentialConstraint>
-            </Association>
-            <Association Name="assoc_DD225A25FBB1EC85DBD210D77BE16796" sap:content-version="1">
-                <End Type="cds_zm_ui_movie_d.ZMO_C_MOVIE_ADMIN_DType" Multiplicity="1" Role="FromRole_assoc_DD225A25FBB1EC85DBD210D77BE16796"/>
-                <End Type="cds_zm_ui_movie_d.ZMO_C_MOVIE_ADMIN_DType" Multiplicity="*" Role="ToRole_assoc_DD225A25FBB1EC85DBD210D77BE16796"/>
-            </Association>
-            <Association Name="assoc_84E32A83A7C404A013BD2F3C31897034" sap:content-version="1">
-                <End Type="cds_zm_ui_movie_d.ZMO_C_MOVIE_ADMIN_DType" Multiplicity="1" Role="FromRole_assoc_84E32A83A7C404A013BD2F3C31897034"/>
-                <End Type="cds_zm_ui_movie_d.I_DraftAdministrativeDataType" Multiplicity="0..1" Role="ToRole_assoc_84E32A83A7C404A013BD2F3C31897034"/>
-            </Association>
-            <EntityContainer Name="cds_zm_ui_movie_d_Entities" m:IsDefaultEntityContainer="true" sap:message-scope-supported="true" sap:supported-formats="atom json xlsx pdf">
-                <EntitySet Name="SAP__Currencies" EntityType="cds_zm_ui_movie_d.SAP__Currency" sap:content-version="1"/>
-                <EntitySet Name="SAP__UnitsOfMeasure" EntityType="cds_zm_ui_movie_d.SAP__UnitOfMeasure" sap:content-version="1"/>
-                <EntitySet Name="SAP__MyDocumentDescriptions" EntityType="cds_zm_ui_movie_d.SAP__DocumentDescription" sap:content-version="1"/>
-                <EntitySet Name="SAP__FormatSet" EntityType="cds_zm_ui_movie_d.SAP__Format" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
-                <EntitySet Name="SAP__PDFStandardSet" EntityType="cds_zm_ui_movie_d.SAP__PDFStandard" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
-                <EntitySet Name="SAP__TableColumnsSet" EntityType="cds_zm_ui_movie_d.SAP__TableColumns" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
-                <EntitySet Name="SAP__CoverPageSet" EntityType="cds_zm_ui_movie_d.SAP__CoverPage" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
-                <EntitySet Name="SAP__SignatureSet" EntityType="cds_zm_ui_movie_d.SAP__Signature" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
-                <EntitySet Name="SAP__HierarchySet" EntityType="cds_zm_ui_movie_d.SAP__Hierarchy" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
-                <EntitySet Name="SAP__PDFHeaderSet" EntityType="cds_zm_ui_movie_d.SAP__PDFHeader" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
-                <EntitySet Name="SAP__PDFFooterSet" EntityType="cds_zm_ui_movie_d.SAP__PDFFooter" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:pageable="false" sap:addressable="false" sap:content-version="1"/>
-                <EntitySet Name="SAP__ValueHelpSet" EntityType="cds_zm_ui_movie_d.SAP__ValueHelp" sap:content-version="1"/>
-                <EntitySet Name="I_DraftAdministrativeData" EntityType="cds_zm_ui_movie_d.I_DraftAdministrativeDataType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:addressable="false" sap:content-version="1"/>
-                <EntitySet Name="I_DraftAdministrativeUserVH" EntityType="cds_zm_ui_movie_d.I_DraftAdministrativeUserVHType" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:searchable="true" sap:content-version="1"/>
-                <EntitySet Name="ZMO_C_MOVIE_ADMIN_D" EntityType="cds_zm_ui_movie_d.ZMO_C_MOVIE_ADMIN_DType" sap:content-version="1" sap:deletable-path="Delete_mc" sap:updatable-path="Update_mc"/>
-                <EntitySet Name="ZMO_I_GENRE" EntityType="cds_zm_ui_movie_d.ZMO_I_GENREType" sap:searchable="true" sap:content-version="1" sap:deletable-path="Delete_mc" sap:updatable-path="Update_mc"/>
-                <AssociationSet Name="assoc_DD225A25FBB1EC85DBD210D77BE16796" Association="cds_zm_ui_movie_d.assoc_DD225A25FBB1EC85DBD210D77BE16796" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
-                    <End EntitySet="ZMO_C_MOVIE_ADMIN_D" Role="FromRole_assoc_DD225A25FBB1EC85DBD210D77BE16796"/>
-                    <End EntitySet="ZMO_C_MOVIE_ADMIN_D" Role="ToRole_assoc_DD225A25FBB1EC85DBD210D77BE16796"/>
-                </AssociationSet>
-                <AssociationSet Name="assoc_F2C75C331A19ACA9C2919013A6D7AEC1" Association="cds_zm_ui_movie_d.assoc_F2C75C331A19ACA9C2919013A6D7AEC1" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
-                    <End EntitySet="ZMO_C_MOVIE_ADMIN_D" Role="FromRole_assoc_F2C75C331A19ACA9C2919013A6D7AEC1"/>
-                    <End EntitySet="ZMO_C_MOVIE_ADMIN_D" Role="ToRole_assoc_F2C75C331A19ACA9C2919013A6D7AEC1"/>
-                </AssociationSet>
-                <AssociationSet Name="assoc_84E32A83A7C404A013BD2F3C31897034" Association="cds_zm_ui_movie_d.assoc_84E32A83A7C404A013BD2F3C31897034" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
-                    <End EntitySet="ZMO_C_MOVIE_ADMIN_D" Role="FromRole_assoc_84E32A83A7C404A013BD2F3C31897034"/>
-                    <End EntitySet="I_DraftAdministrativeData" Role="ToRole_assoc_84E32A83A7C404A013BD2F3C31897034"/>
-                </AssociationSet>
-                <AssociationSet Name="assoc_9FF6BDD2A7E6856D14617358ED379E03" Association="cds_zm_ui_movie_d.assoc_9FF6BDD2A7E6856D14617358ED379E03" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
-                    <End EntitySet="ZMO_C_MOVIE_ADMIN_D" Role="FromRole_assoc_9FF6BDD2A7E6856D14617358ED379E03"/>
-                    <End EntitySet="ZMO_I_GENRE" Role="ToRole_assoc_9FF6BDD2A7E6856D14617358ED379E03"/>
-                </AssociationSet>
-                <AssociationSet Name="to_FooterSet" Association="cds_zm_ui_movie_d.to_Footer" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
-                    <End EntitySet="SAP__MyDocumentDescriptions" Role="FromRole_to_Footer"/>
-                    <End EntitySet="SAP__PDFFooterSet" Role="ToRole_to_Footer"/>
-                </AssociationSet>
-                <AssociationSet Name="to_headerSet" Association="cds_zm_ui_movie_d.to_header" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
-                    <End EntitySet="SAP__MyDocumentDescriptions" Role="FromRole_to_header"/>
-                    <End EntitySet="SAP__PDFHeaderSet" Role="ToRole_to_header"/>
-                </AssociationSet>
-                <AssociationSet Name="to_formatSet" Association="cds_zm_ui_movie_d.to_format" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
-                    <End EntitySet="SAP__MyDocumentDescriptions" Role="FromRole_to_format"/>
-                    <End EntitySet="SAP__FormatSet" Role="ToRole_to_format"/>
-                </AssociationSet>
-                <AssociationSet Name="to_pdfstandardSet" Association="cds_zm_ui_movie_d.to_pdfstandard" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
-                    <End EntitySet="SAP__MyDocumentDescriptions" Role="FromRole_to_pdfstandard"/>
-                    <End EntitySet="SAP__PDFStandardSet" Role="ToRole_to_pdfstandard"/>
-                </AssociationSet>
-                <AssociationSet Name="to_tablecolumnsSet" Association="cds_zm_ui_movie_d.to_tablecolumns" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
-                    <End EntitySet="SAP__MyDocumentDescriptions" Role="FromRole_to_tablecolumns"/>
-                    <End EntitySet="SAP__TableColumnsSet" Role="ToRole_to_tablecolumns"/>
-                </AssociationSet>
-                <AssociationSet Name="to_signatureSet" Association="cds_zm_ui_movie_d.to_signature" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
-                    <End EntitySet="SAP__MyDocumentDescriptions" Role="FromRole_to_signature"/>
-                    <End EntitySet="SAP__SignatureSet" Role="ToRole_to_signature"/>
-                </AssociationSet>
-                <AssociationSet Name="to_coverpageSet" Association="cds_zm_ui_movie_d.to_coverpage" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
-                    <End EntitySet="SAP__MyDocumentDescriptions" Role="FromRole_to_coverpage"/>
-                    <End EntitySet="SAP__CoverPageSet" Role="ToRole_to_coverpage"/>
-                </AssociationSet>
-                <AssociationSet Name="to_HierarchySet" Association="cds_zm_ui_movie_d.to_Hierarchy" sap:creatable="false" sap:updatable="false" sap:deletable="false" sap:content-version="1">
-                    <End EntitySet="SAP__MyDocumentDescriptions" Role="FromRole_to_Hierarchy"/>
-                    <End EntitySet="SAP__HierarchySet" Role="ToRole_to_Hierarchy"/>
-                </AssociationSet>
-                <FunctionImport Name="ZMO_C_MOVIE_ADMIN_DActivate" ReturnType="cds_zm_ui_movie_d.ZMO_C_MOVIE_ADMIN_DType" EntitySet="ZMO_C_MOVIE_ADMIN_D" m:HttpMethod="POST" sap:action-for="cds_zm_ui_movie_d.ZMO_C_MOVIE_ADMIN_DType">
-                    <Parameter Name="Guid" Type="Edm.Guid" Mode="In" sap:label="UUID"/>
-                    <Parameter Name="IsActiveEntity" Type="Edm.Boolean" Mode="In" sap:label="Is active"/>
-                </FunctionImport>
-                <FunctionImport Name="ZMO_C_MOVIE_ADMIN_DDiscard" ReturnType="cds_zm_ui_movie_d.DummyFunctionImportResult" m:HttpMethod="POST" sap:action-for="cds_zm_ui_movie_d.ZMO_C_MOVIE_ADMIN_DType">
-                    <Parameter Name="Guid" Type="Edm.Guid" Mode="In" sap:label="UUID"/>
-                    <Parameter Name="IsActiveEntity" Type="Edm.Boolean" Mode="In" sap:label="Is active"/>
-                </FunctionImport>
-                <FunctionImport Name="ZMO_C_MOVIE_ADMIN_DEdit" ReturnType="cds_zm_ui_movie_d.ZMO_C_MOVIE_ADMIN_DType" EntitySet="ZMO_C_MOVIE_ADMIN_D" m:HttpMethod="POST" sap:action-for="cds_zm_ui_movie_d.ZMO_C_MOVIE_ADMIN_DType" sap:applicable-path="Edit_ac">
-                    <Parameter Name="Guid" Type="Edm.Guid" Mode="In" sap:label="UUID"/>
-                    <Parameter Name="IsActiveEntity" Type="Edm.Boolean" Mode="In" sap:label="Is active"/>
-                    <Parameter Name="PreserveChanges" Type="Edm.Boolean" Mode="In" Nullable="true" sap:label="TRUE"/>
-                </FunctionImport>
-                <FunctionImport Name="ZMO_C_MOVIE_ADMIN_DPrepare" ReturnType="cds_zm_ui_movie_d.DummyFunctionImportResult" m:HttpMethod="POST" sap:action-for="cds_zm_ui_movie_d.ZMO_C_MOVIE_ADMIN_DType">
-                    <Parameter Name="Guid" Type="Edm.Guid" Mode="In" sap:label="UUID"/>
-                    <Parameter Name="IsActiveEntity" Type="Edm.Boolean" Mode="In" sap:label="Is active"/>
-                </FunctionImport>
-                <FunctionImport Name="ZMO_C_MOVIE_ADMIN_DResume" ReturnType="cds_zm_ui_movie_d.DummyFunctionImportResult" m:HttpMethod="POST" sap:action-for="cds_zm_ui_movie_d.ZMO_C_MOVIE_ADMIN_DType">
-                    <Parameter Name="Guid" Type="Edm.Guid" Mode="In" sap:label="UUID"/>
-                    <Parameter Name="IsActiveEntity" Type="Edm.Boolean" Mode="In" sap:label="Is active"/>
-                </FunctionImport>
+            <Action Name="Resume" IsBound="true">
+                <Parameter Name="_it" Type="com.sap.gateway.srvd.zm_ui_movie_d.v0001.ZMO_C_MOVIE_ADMIN_DType" Nullable="false"/>
+            </Action>
+            <Action Name="Prepare" IsBound="true">
+                <Parameter Name="_it" Type="com.sap.gateway.srvd.zm_ui_movie_d.v0001.ZMO_C_MOVIE_ADMIN_DType" Nullable="false"/>
+            </Action>
+            <Action Name="Discard" IsBound="true">
+                <Parameter Name="_it" Type="com.sap.gateway.srvd.zm_ui_movie_d.v0001.ZMO_C_MOVIE_ADMIN_DType" Nullable="false"/>
+            </Action>
+            <Action Name="Activate" EntitySetPath="_it" IsBound="true">
+                <Parameter Name="_it" Type="com.sap.gateway.srvd.zm_ui_movie_d.v0001.ZMO_C_MOVIE_ADMIN_DType" Nullable="false"/>
+                <ReturnType Type="com.sap.gateway.srvd.zm_ui_movie_d.v0001.ZMO_C_MOVIE_ADMIN_DType" Nullable="false"/>
+            </Action>
+            <Action Name="Edit" EntitySetPath="_it" IsBound="true">
+                <Parameter Name="_it" Type="com.sap.gateway.srvd.zm_ui_movie_d.v0001.ZMO_C_MOVIE_ADMIN_DType" Nullable="false"/>
+                <Parameter Name="PreserveChanges" Type="Edm.Boolean" Nullable="false"/>
+                <ReturnType Type="com.sap.gateway.srvd.zm_ui_movie_d.v0001.ZMO_C_MOVIE_ADMIN_DType" Nullable="false"/>
+            </Action>
+            <EntityContainer Name="Container">
+                <EntitySet Name="I_DraftAdministrativeData" EntityType="com.sap.gateway.srvd.zm_ui_movie_d.v0001.I_DraftAdministrativeDataType"/>
+                <EntitySet Name="ZMO_C_MOVIE_ADMIN_D" EntityType="com.sap.gateway.srvd.zm_ui_movie_d.v0001.ZMO_C_MOVIE_ADMIN_DType">
+                    <NavigationPropertyBinding Path="DraftAdministrativeData" Target="I_DraftAdministrativeData"/>
+                    <NavigationPropertyBinding Path="SiblingEntity" Target="ZMO_C_MOVIE_ADMIN_D"/>
+                    <NavigationPropertyBinding Path="_Genre" Target="ZMO_I_GENRE"/>
+                    <NavigationPropertyBinding Path="_MovieByGenre" Target="ZMO_C_MOVIE_ADMIN_D"/>
+                </EntitySet>
+                <EntitySet Name="ZMO_I_GENRE" EntityType="com.sap.gateway.srvd.zm_ui_movie_d.v0001.ZMO_I_GENREType"/>
             </EntityContainer>
-            <Annotation Term="Core.SchemaVersion" String="1.0.0" xmlns="http://docs.oasis-open.org/odata/ns/edm"/>
-            <Annotations Target="cds_zm_ui_movie_d.cds_zm_ui_movie_d_Entities/ZMO_C_MOVIE_ADMIN_D" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-                <Annotation Term="Common.DraftRoot">
+            <Annotations Target="SAP__self.ZMO_I_GENREType/Id">
+                <Annotation Term="SAP__core.Immutable"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZMO_I_GENREType/__EntityControl">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__UI.HiddenFilter"/>
+                <Annotation Term="SAP__UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZMO_I_GENREType">
+                <Annotation Term="SAP__common.Label" String="Genre View CDS Data Model"/>
+                <Annotation Term="SAP__UI.Facets">
+                    <Collection>
+                        <Record Type="SAP__UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Genre"/>
+                            <PropertyValue Property="ID" String="Genre"/>
+                            <PropertyValue Property="Target" AnnotationPath="@SAP__UI.Identification"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__UI.Identification">
+                    <Collection>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Id"/>
+                            <PropertyValue Property="Value" Path="Id"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Name"/>
+                            <PropertyValue Property="Value" Path="Name"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__UI.LineItem">
+                    <Collection>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="Id"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Name"/>
+                            <PropertyValue Property="Value" Path="Name"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>Name</PropertyPath>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__common.Messages" Path="SAP__Messages"/>
+            </Annotations>
+            <Annotations Target="SAP__self.Container/ZMO_I_GENRE">
+                <Annotation Term="SAP__capabilities.SearchRestrictions">
                     <Record>
-                        <PropertyValue Property="ActivationAction" String="cds_zm_ui_movie_d.cds_zm_ui_movie_d_Entities/ZMO_C_MOVIE_ADMIN_DActivate"/>
-                        <PropertyValue Property="DiscardAction" String="cds_zm_ui_movie_d.cds_zm_ui_movie_d_Entities/ZMO_C_MOVIE_ADMIN_DDiscard"/>
-                        <PropertyValue Property="EditAction" String="cds_zm_ui_movie_d.cds_zm_ui_movie_d_Entities/ZMO_C_MOVIE_ADMIN_DEdit"/>
-                        <PropertyValue Property="PreparationAction" String="cds_zm_ui_movie_d.cds_zm_ui_movie_d_Entities/ZMO_C_MOVIE_ADMIN_DPrepare"/>
+                        <PropertyValue Property="Searchable" Bool="true"/>
+                        <PropertyValue Property="UnsupportedExpressions" EnumMember="SAP__capabilities.SearchExpressions/AND SAP__capabilities.SearchExpressions/OR SAP__capabilities.SearchExpressions/NOT SAP__capabilities.SearchExpressions/group SAP__capabilities.SearchExpressions/phrase"/>
                     </Record>
                 </Annotation>
-                <Annotation Term="Capabilities.DeleteRestrictions">
-                    <Record>
-                        <PropertyValue Property="Deletable" Path="Delete_mc"/>
-                    </Record>
-                </Annotation>
-                <Annotation Term="Capabilities.FilterRestrictions">
+                <Annotation Term="SAP__capabilities.FilterRestrictions">
                     <Record>
                         <PropertyValue Property="NonFilterableProperties">
                             <Collection>
-                                <PropertyPath>Edit_ac</PropertyPath>
-                                <PropertyPath>Delete_mc</PropertyPath>
-                                <PropertyPath>Update_mc</PropertyPath>
-                            </Collection>
-                        </PropertyValue>
-                        <PropertyValue Property="FilterExpressionRestrictions">
-                            <Collection>
-                                <Record>
-                                    <PropertyValue Property="Property" PropertyPath="DraftEntityCreationDateTime"/>
-                                    <PropertyValue Property="AllowedExpressions" String="SingleRange"/>
-                                </Record>
-                                <Record>
-                                    <PropertyValue Property="Property" PropertyPath="DraftEntityLastChangeDateTime"/>
-                                    <PropertyValue Property="AllowedExpressions" String="SingleRange"/>
-                                </Record>
+                                <PropertyPath>__EntityControl</PropertyPath>
                             </Collection>
                         </PropertyValue>
                     </Record>
                 </Annotation>
-                <Annotation Term="Capabilities.InsertRestrictions">
+                <Annotation Term="SAP__capabilities.SortRestrictions">
                     <Record>
-                        <PropertyValue Property="Insertable" Bool="true"/>
+                        <PropertyValue Property="NonSortableProperties">
+                            <Collection>
+                                <PropertyPath>__EntityControl</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
                     </Record>
                 </Annotation>
-                <Annotation Term="Capabilities.NavigationRestrictions">
+                <Annotation Term="SAP__capabilities.DeleteRestrictions">
                     <Record>
-                        <PropertyValue Property="RestrictedProperties">
-                            <Collection>
-                                <Record>
-                                    <PropertyValue Property="NavigationProperty" NavigationPropertyPath="DraftAdministrativeData"/>
-                                    <PropertyValue Property="InsertRestrictions">
-                                        <Record>
-                                            <PropertyValue Property="Insertable" Bool="false"/>
-                                        </Record>
-                                    </PropertyValue>
-                                </Record>
-                                <Record>
-                                    <PropertyValue Property="NavigationProperty" NavigationPropertyPath="SiblingEntity"/>
-                                    <PropertyValue Property="InsertRestrictions">
-                                        <Record>
-                                            <PropertyValue Property="Insertable" Bool="false"/>
-                                        </Record>
-                                    </PropertyValue>
-                                </Record>
-                                <Record>
-                                    <PropertyValue Property="NavigationProperty" NavigationPropertyPath="to_Genre"/>
-                                    <PropertyValue Property="InsertRestrictions">
-                                        <Record>
-                                            <PropertyValue Property="Insertable" Bool="false"/>
-                                        </Record>
-                                    </PropertyValue>
-                                </Record>
-                                <Record>
-                                    <PropertyValue Property="NavigationProperty" NavigationPropertyPath="to_MovieByGenre"/>
-                                    <PropertyValue Property="InsertRestrictions">
-                                        <Record>
-                                            <PropertyValue Property="Insertable" Bool="false"/>
-                                        </Record>
-                                    </PropertyValue>
-                                </Record>
-                            </Collection>
+                        <PropertyValue Property="Deletable" Path="__EntityControl/Deletable"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Path="__EntityControl/Updatable"/>
+                        <PropertyValue Property="QueryOptions">
+                            <Record>
+                                <PropertyValue Property="SelectSupported" Bool="true"/>
+                            </Record>
                         </PropertyValue>
                     </Record>
                 </Annotation>
                 <Annotation Term="SAP__core.OptimisticConcurrency">
                     <Collection/>
                 </Annotation>
-                <Annotation Term="Capabilities.SortRestrictions">
+            </Annotations>
+            <Annotations Target="SAP__self.I_DraftAdministrativeDataType/DraftEntityType">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__UI.Hidden"/>
+                <Annotation Term="SAP__common.Label" String="Draft Entity ID"/>
+            </Annotations>
+            <Annotations Target="SAP__self.I_DraftAdministrativeDataType/CreatedByUser">
+                <Annotation Term="SAP__common.Text" Path="CreatedByUserDescription"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Collection>
+                        <String>../../../../srvd_f4/sap/i_draftadministrativeuservh/0001;ps='srvd-zm_ui_movie_d-0001';va='com.sap.gateway.srvd.zm_ui_movie_d.v0001.et-i_draftadministrativedata.createdbyuser'/$metadata</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__common.Label" String="Draft Created By"/>
+            </Annotations>
+            <Annotations Target="SAP__self.I_DraftAdministrativeDataType/LastChangedByUser">
+                <Annotation Term="SAP__common.Text" Path="LastChangedByUserDescription"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Collection>
+                        <String>../../../../srvd_f4/sap/i_draftadministrativeuservh/0001;ps='srvd-zm_ui_movie_d-0001';va='com.sap.gateway.srvd.zm_ui_movie_d.v0001.et-i_draftadministrativedata.lastchangedbyuser'/$metadata</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__common.Label" String="Draft Last Changed By"/>
+            </Annotations>
+            <Annotations Target="SAP__self.I_DraftAdministrativeDataType/DraftAccessType">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__UI.Hidden"/>
+                <Annotation Term="SAP__common.Label" String="Draft Access Type"/>
+            </Annotations>
+            <Annotations Target="SAP__self.I_DraftAdministrativeDataType/InProcessByUser">
+                <Annotation Term="SAP__common.Text" Path="InProcessByUserDescription"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__UI.Hidden"/>
+                <Annotation Term="SAP__common.Label" String="Draft In Process By"/>
+            </Annotations>
+            <Annotations Target="SAP__self.I_DraftAdministrativeDataType">
+                <Annotation Term="SAP__common.Label" String="Draft Administration Data"/>
+            </Annotations>
+            <Annotations Target="SAP__self.Container/I_DraftAdministrativeData">
+                <Annotation Term="SAP__capabilities.SearchRestrictions">
                     <Record>
-                        <PropertyValue Property="NonSortableProperties">
-                            <Collection>
-                                <PropertyPath>Edit_ac</PropertyPath>
-                                <PropertyPath>Delete_mc</PropertyPath>
-                                <PropertyPath>Update_mc</PropertyPath>
-                            </Collection>
-                        </PropertyValue>
+                        <PropertyValue Property="Searchable" Bool="true"/>
+                        <PropertyValue Property="UnsupportedExpressions" EnumMember="SAP__capabilities.SearchExpressions/AND SAP__capabilities.SearchExpressions/OR SAP__capabilities.SearchExpressions/NOT SAP__capabilities.SearchExpressions/group SAP__capabilities.SearchExpressions/phrase"/>
                     </Record>
                 </Annotation>
-                <Annotation Term="Capabilities.UpdateRestrictions">
+                <Annotation Term="SAP__capabilities.FilterRestrictions">
                     <Record>
-                        <PropertyValue Property="Updatable" Path="Update_mc"/>
-                    </Record>
-                </Annotation>
-            </Annotations>
-            <Annotations Target="cds_zm_ui_movie_d.I_DraftAdministrativeDataType/CreatedByUser" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-                <Annotation Term="Common.ValueList">
-                    <Record>
-                        <PropertyValue Property="Label" String="Draft Created By"/>
-                        <PropertyValue Property="CollectionPath" String="I_DraftAdministrativeUserVH"/>
-                        <PropertyValue Property="SearchSupported" Bool="true"/>
-                        <PropertyValue Property="Parameters">
-                            <Collection>
-                                <Record Type="Common.ValueListParameterInOut">
-                                    <PropertyValue Property="LocalDataProperty" PropertyPath="CreatedByUser"/>
-                                    <PropertyValue Property="ValueListProperty" String="UserID"/>
-                                </Record>
-                                <Record Type="Common.ValueListParameterDisplayOnly">
-                                    <PropertyValue Property="ValueListProperty" String="UserDescription"/>
-                                </Record>
-                            </Collection>
-                        </PropertyValue>
-                    </Record>
-                </Annotation>
-            </Annotations>
-            <Annotations Target="cds_zm_ui_movie_d.I_DraftAdministrativeDataType/LastChangedByUser" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-                <Annotation Term="Common.ValueList">
-                    <Record>
-                        <PropertyValue Property="Label" String="Draft Last Changed By"/>
-                        <PropertyValue Property="CollectionPath" String="I_DraftAdministrativeUserVH"/>
-                        <PropertyValue Property="SearchSupported" Bool="true"/>
-                        <PropertyValue Property="Parameters">
-                            <Collection>
-                                <Record Type="Common.ValueListParameterInOut">
-                                    <PropertyValue Property="LocalDataProperty" PropertyPath="LastChangedByUser"/>
-                                    <PropertyValue Property="ValueListProperty" String="UserID"/>
-                                </Record>
-                                <Record Type="Common.ValueListParameterDisplayOnly">
-                                    <PropertyValue Property="ValueListProperty" String="UserDescription"/>
-                                </Record>
-                            </Collection>
-                        </PropertyValue>
-                    </Record>
-                </Annotation>
-            </Annotations>
-            <Annotations Target="cds_zm_ui_movie_d.ZMO_C_MOVIE_ADMIN_DType/GenreId" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-                <Annotation Term="Common.ValueListForValidation" String=""/>
-                <Annotation Term="Common.ValueList">
-                    <Record>
-                        <PropertyValue Property="Label" String=""/>
-                        <PropertyValue Property="CollectionPath" String="ZMO_I_GENRE"/>
-                        <PropertyValue Property="SearchSupported" Bool="true"/>
-                        <PropertyValue Property="Parameters">
-                            <Collection>
-                                <Record Type="Common.ValueListParameterInOut">
-                                    <PropertyValue Property="LocalDataProperty" PropertyPath="GenreId"/>
-                                    <PropertyValue Property="ValueListProperty" String="Id"/>
-                                    <Annotation Term="UI.Importance" EnumMember="UI.ImportanceType/High"/>
-                                </Record>
-                                <Record Type="Common.ValueListParameterDisplayOnly">
-                                    <PropertyValue Property="ValueListProperty" String="Name"/>
-                                </Record>
-                            </Collection>
-                        </PropertyValue>
-                    </Record>
-                </Annotation>
-            </Annotations>
-            <Annotations Target="cds_zm_ui_movie_d.cds_zm_ui_movie_d_Entities" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-                <Annotation Term="Common.ApplyMultiUnitBehaviorForSortingAndFiltering" Bool="true"/>
-            </Annotations>
-            <Annotations Target="cds_zm_ui_movie_d.ZMO_C_MOVIE_ADMIN_DType" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-                <Annotation Term="Common.ChangedAt" Path="LastChangedAt"/>
-            </Annotations>
-            <Annotations Target="cds_zm_ui_movie_d.cds_zm_ui_movie_d_Entities/I_DraftAdministrativeData" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-                <Annotation Term="Capabilities.DeleteRestrictions">
-                    <Record>
-                        <PropertyValue Property="Deletable" Bool="false"/>
-                    </Record>
-                </Annotation>
-                <Annotation Term="Capabilities.FilterRestrictions">
-                    <Record>
+                        <PropertyValue Property="Filterable" Bool="true"/>
                         <PropertyValue Property="FilterExpressionRestrictions">
                             <Collection>
                                 <Record>
@@ -643,162 +306,17 @@
                         </PropertyValue>
                     </Record>
                 </Annotation>
-                <Annotation Term="Capabilities.InsertRestrictions">
+                <Annotation Term="SAP__capabilities.InsertRestrictions">
                     <Record>
                         <PropertyValue Property="Insertable" Bool="false"/>
                     </Record>
                 </Annotation>
-                <Annotation Term="Capabilities.UpdateRestrictions">
-                    <Record>
-                        <PropertyValue Property="Updatable" Bool="false"/>
-                    </Record>
-                </Annotation>
-            </Annotations>
-            <Annotations Target="cds_zm_ui_movie_d.cds_zm_ui_movie_d_Entities/I_DraftAdministrativeUserVH" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-                <Annotation Term="Capabilities.DeleteRestrictions">
+                <Annotation Term="SAP__capabilities.DeleteRestrictions">
                     <Record>
                         <PropertyValue Property="Deletable" Bool="false"/>
                     </Record>
                 </Annotation>
-                <Annotation Term="Capabilities.InsertRestrictions">
-                    <Record>
-                        <PropertyValue Property="Insertable" Bool="false"/>
-                    </Record>
-                </Annotation>
-                <Annotation Term="Capabilities.UpdateRestrictions">
-                    <Record>
-                        <PropertyValue Property="Updatable" Bool="false"/>
-                    </Record>
-                </Annotation>
-            </Annotations>
-            <Annotations Target="cds_zm_ui_movie_d.cds_zm_ui_movie_d_Entities/ZMO_I_GENRE" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-                <Annotation Term="Capabilities.DeleteRestrictions">
-                    <Record>
-                        <PropertyValue Property="Deletable" Path="Delete_mc"/>
-                    </Record>
-                </Annotation>
-                <Annotation Term="Capabilities.FilterRestrictions">
-                    <Record>
-                        <PropertyValue Property="NonFilterableProperties">
-                            <Collection>
-                                <PropertyPath>Delete_mc</PropertyPath>
-                                <PropertyPath>Update_mc</PropertyPath>
-                            </Collection>
-                        </PropertyValue>
-                    </Record>
-                </Annotation>
-                <Annotation Term="Capabilities.InsertRestrictions">
-                    <Record>
-                        <PropertyValue Property="Insertable" Bool="true"/>
-                    </Record>
-                </Annotation>
-                <Annotation Term="SAP__core.OptimisticConcurrency">
-                    <Collection/>
-                </Annotation>
-                <Annotation Term="Capabilities.SortRestrictions">
-                    <Record>
-                        <PropertyValue Property="NonSortableProperties">
-                            <Collection>
-                                <PropertyPath>Delete_mc</PropertyPath>
-                                <PropertyPath>Update_mc</PropertyPath>
-                            </Collection>
-                        </PropertyValue>
-                    </Record>
-                </Annotation>
-                <Annotation Term="Capabilities.UpdateRestrictions">
-                    <Record>
-                        <PropertyValue Property="Updatable" Path="Update_mc"/>
-                    </Record>
-                </Annotation>
-            </Annotations>
-            <Annotations Target="cds_zm_ui_movie_d.ZMO_I_GENREType/Id" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-                <Annotation Term="SAP__core.Immutable"/>
-            </Annotations>
-            <Annotations Target="cds_zm_ui_movie_d.cds_zm_ui_movie_d_Entities" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-                <Annotation Term="Org.OData.Capabilities.V1.BatchSupport">
-                    <Record Type="Org.OData.Capabilities.V1.BatchSupportType">
-                        <PropertyValue Property="ReferencesAcrossChangeSetsSupported" Bool="true"/>
-                    </Record>
-                </Annotation>
-                <Annotation Term="SAP__CodeList.CurrencyCodes">
-                    <Record>
-                        <PropertyValue Property="Url" String="./$metadata"/>
-                        <PropertyValue Property="CollectionPath" String="SAP__Currencies"/>
-                    </Record>
-                </Annotation>
-                <Annotation Term="SAP__CodeList.UnitsOfMeasure">
-                    <Record>
-                        <PropertyValue Property="Url" String="./$metadata"/>
-                        <PropertyValue Property="CollectionPath" String="SAP__UnitsOfMeasure"/>
-                    </Record>
-                </Annotation>
-                <Annotation Term="SAP__PDF.Features">
-                    <Record>
-                        <PropertyValue Property="DocumentDescriptionReference" String="./$metadata"/>
-                        <PropertyValue Property="DocumentDescriptionCollection" String="SAP__MyDocumentDescriptions"/>
-                        <PropertyValue Property="ArchiveFormat" Bool="true"/>
-                        <PropertyValue Property="CoverPage" Bool="true"/>
-                        <PropertyValue Property="Signature" Bool="true"/>
-                        <PropertyValue Property="FitToPage" Bool="true"/>
-                        <PropertyValue Property="FontName" Bool="true"/>
-                        <PropertyValue Property="FontSize" Bool="true"/>
-                        <PropertyValue Property="Margin" Bool="true"/>
-                        <PropertyValue Property="Border" Bool="true"/>
-                        <PropertyValue Property="Padding" Bool="true"/>
-                        <PropertyValue Property="HeaderFooter" Bool="true"/>
-                        <PropertyValue Property="IANATimezoneFormat" Bool="true"/>
-                        <PropertyValue Property="ResultSizeDefault" Int="20000"/>
-                        <PropertyValue Property="ResultSizeMaximum" Int="20000"/>
-                        <PropertyValue Property="Treeview" Bool="true"/>
-                    </Record>
-                </Annotation>
-                <Annotation Term="SAP__CodeList.SAP__DocumentDescription">
-                    <Record>
-                        <PropertyValue Property="Url" String="./$metadata"/>
-                        <PropertyValue Property="CollectionPath" String="SAP__MyDocumentDescriptions"/>
-                    </Record>
-                </Annotation>
-            </Annotations>
-            <Annotations Target="cds_zm_ui_movie_d.SAP__Currency/CurrencyCode" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-                <Annotation Term="SAP__common.Text" Path="Text"/>
-                <Annotation Term="SAP__common.UnitSpecificScale" Path="DecimalPlaces"/>
-                <Annotation Term="SAP__CodeList.StandardCode" Path="ISOCode"/>
-            </Annotations>
-            <Annotations Target="cds_zm_ui_movie_d.SAP__UnitOfMeasure/UnitCode" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-                <Annotation Term="SAP__common.Text" Path="Text"/>
-                <Annotation Term="SAP__common.UnitSpecificScale" Path="DecimalPlaces"/>
-                <Annotation Term="SAP__CodeList.StandardCode" Path="ISOCode"/>
-                <Annotation Term="SAP__CodeList.ExternalCode" Path="ExternalCode"/>
-            </Annotations>
-            <Annotations Target="cds_zm_ui_movie_d.SAP__UnitOfMeasure" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-                <Annotation Term="SAP__core.AlternateKeys">
-                    <Collection>
-                        <Record>
-                            <PropertyValue Property="Key">
-                                <Collection>
-                                    <Record>
-                                        <PropertyValue Property="Name" Path="ExternalCode"/>
-                                        <PropertyValue Property="Alias" String="ExternalCode"/>
-                                    </Record>
-                                </Collection>
-                            </PropertyValue>
-                        </Record>
-                    </Collection>
-                </Annotation>
-            </Annotations>
-            <Annotations Target="cds_zm_ui_movie_d.SAP__DocumentDescription/CreatedBy" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-                <Annotation Term="SAP__core.Computed"/>
-            </Annotations>
-            <Annotations Target="cds_zm_ui_movie_d.SAP__DocumentDescription/CreatedAt" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-                <Annotation Term="SAP__core.Computed"/>
-            </Annotations>
-            <Annotations Target="cds_zm_ui_movie_d.SAP__DocumentDescription" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-                <Annotation Term="SAP__capabilties.InsertRestrictions">
-                    <Record>
-                        <PropertyValue Property="Insertable" Bool="false"/>
-                    </Record>
-                </Annotation>
-                <Annotation Term="SAP__capabilties.UpdateRestrictions">
+                <Annotation Term="SAP__capabilities.UpdateRestrictions">
                     <Record>
                         <PropertyValue Property="Updatable" Bool="false"/>
                         <PropertyValue Property="QueryOptions">
@@ -808,138 +326,412 @@
                         </PropertyValue>
                     </Record>
                 </Annotation>
-                <Annotation Term="SAP__capabilties.DeleteRestrictions">
-                    <Record>
-                        <PropertyValue Property="Deletable" Bool="false"/>
-                    </Record>
+                <Annotation Term="SAP__core.OptimisticConcurrency">
+                    <Collection/>
                 </Annotation>
-                <Annotation Term="SAP__capabilties.FilterRestrictions">
+            </Annotations>
+            <Annotations Target="SAP__self.ZMO_C_MOVIE_ADMIN_DType/Guid">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__UI.Hidden"/>
+                <Annotation Term="SAP__common.Label" String="UUID"/>
+                <Annotation Term="SAP__common.QuickInfo" String="16 Byte UUID in 16 Bytes (Raw Format)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZMO_C_MOVIE_ADMIN_DType/GenreId">
+                <Annotation Term="SAP__common.Text" Path="GenreName">
+                    <Annotation Term="SAP__UI.TextArrangement" EnumMember="SAP__UI.TextArrangementType/TextOnly"/>
+                </Annotation>
+                <Annotation Term="SAP__common.ValueListForValidation" String=""/>
+                <Annotation Term="SAP__common.ValueListReferences">
+                    <Collection>
+                        <String>../../../../srvd_f4/sap/zmo_i_genre/0001;ps='srvd-zm_ui_movie_d-0001';va='com.sap.gateway.srvd.zm_ui_movie_d.v0001.et-zmo_c_movie_admin_d.genreid'/$metadata</String>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.ZMO_C_MOVIE_ADMIN_DType/LastChangedAt">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__UI.Hidden"/>
+                <Annotation Term="SAP__common.Label" String="Changed On"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Local Instance Last Change Date Time"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZMO_C_MOVIE_ADMIN_DType/HasDraftEntity">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__UI.HiddenFilter"/>
+                <Annotation Term="SAP__UI.Hidden"/>
+                <Annotation Term="SAP__common.Label" String="Has Draft"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Draft - Indicator - Has draft document"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZMO_C_MOVIE_ADMIN_DType/DraftEntityCreationDateTime">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__UI.HiddenFilter"/>
+                <Annotation Term="SAP__UI.Hidden"/>
+                <Annotation Term="SAP__common.Label" String="Draft Created On"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZMO_C_MOVIE_ADMIN_DType/DraftEntityLastChangeDateTime">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__UI.HiddenFilter"/>
+                <Annotation Term="SAP__UI.Hidden"/>
+                <Annotation Term="SAP__common.Label" String="Draft Last Changed On"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZMO_C_MOVIE_ADMIN_DType/HasActiveEntity">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__UI.HiddenFilter"/>
+                <Annotation Term="SAP__UI.Hidden"/>
+                <Annotation Term="SAP__common.Label" String="Has active"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Draft - Indicator - Has active document"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZMO_C_MOVIE_ADMIN_DType/IsActiveEntity">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__UI.HiddenFilter"/>
+                <Annotation Term="SAP__UI.Hidden"/>
+                <Annotation Term="SAP__common.Label" String="Is active"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Draft - Indicator - Is active document"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZMO_C_MOVIE_ADMIN_DType/__EntityControl">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__UI.HiddenFilter"/>
+                <Annotation Term="SAP__UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZMO_C_MOVIE_ADMIN_DType/__OperationControl">
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__UI.HiddenFilter"/>
+                <Annotation Term="SAP__UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SAP__self.Container/ZMO_C_MOVIE_ADMIN_D">
+                <Annotation Term="SAP__capabilities.NavigationRestrictions">
                     <Record>
-                        <PropertyValue Property="FilterExpressionRestrictions">
+                        <PropertyValue Property="RestrictedProperties">
                             <Collection>
                                 <Record>
-                                    <PropertyValue Property="Property" PropertyPath="Format/Orientation"/>
-                                    <PropertyValue Property="AllowedExpressions" String="Multivalue"/>
+                                    <PropertyValue Property="NavigationProperty" NavigationPropertyPath="_Genre"/>
+                                    <PropertyValue Property="InsertRestrictions">
+                                        <Record>
+                                            <PropertyValue Property="Insertable" Bool="false"/>
+                                        </Record>
+                                    </PropertyValue>
                                 </Record>
                                 <Record>
-                                    <PropertyValue Property="Property" PropertyPath="Format/PaperSize"/>
-                                    <PropertyValue Property="AllowedExpressions" String="Multivalue"/>
+                                    <PropertyValue Property="NavigationProperty" NavigationPropertyPath="_MovieByGenre"/>
+                                    <PropertyValue Property="InsertRestrictions">
+                                        <Record>
+                                            <PropertyValue Property="Insertable" Bool="false"/>
+                                        </Record>
+                                    </PropertyValue>
                                 </Record>
                             </Collection>
                         </PropertyValue>
                     </Record>
                 </Annotation>
-            </Annotations>
-            <Annotations Target="cds_zm_ui_movie_d.SAP__Format/FitToPage/ErrorRecoveryBehavior" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-                <Annotation Term="SAP__common.ValueListReferences">
+                <Annotation Term="SAP__common.DraftRoot">
                     <Record>
-                        <PropertyValue Property="Url" String="./$metadata"/>
-                        <PropertyValue Property="CollectionPath" String="../../../../SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27ErrorRecoveryBehaviour%27"/>
+                        <PropertyValue Property="PreparationAction" String="com.sap.gateway.srvd.zm_ui_movie_d.v0001.Prepare"/>
+                        <PropertyValue Property="DiscardAction" String="com.sap.gateway.srvd.zm_ui_movie_d.v0001.Discard"/>
+                        <PropertyValue Property="ActivationAction" String="com.sap.gateway.srvd.zm_ui_movie_d.v0001.Activate"/>
+                        <PropertyValue Property="EditAction" String="com.sap.gateway.srvd.zm_ui_movie_d.v0001.Edit"/>
                     </Record>
                 </Annotation>
-                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
-            </Annotations>
-            <Annotations Target="cds_zm_ui_movie_d.SAP__Format/FontName" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-                <Annotation Term="SAP__common.ValueListReferences">
+                <Annotation Term="SAP__capabilities.SearchRestrictions">
                     <Record>
-                        <PropertyValue Property="Url" String="./$metadata"/>
-                        <PropertyValue Property="CollectionPath" String="SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27FontName%27"/>
+                        <PropertyValue Property="Searchable" Bool="false"/>
                     </Record>
                 </Annotation>
-                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
-            </Annotations>
-            <Annotations Target="cds_zm_ui_movie_d.SAP__Format/PaperSize" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-                <Annotation Term="SAP__common.ValueListReferences">
+                <Annotation Term="SAP__capabilities.FilterRestrictions">
                     <Record>
-                        <PropertyValue Property="Url" String="./$metadata"/>
-                        <PropertyValue Property="CollectionPath" String="SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27PaperSize%27"/>
+                        <PropertyValue Property="Filterable" Bool="true"/>
+                        <PropertyValue Property="FilterExpressionRestrictions">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="DraftEntityCreationDateTime"/>
+                                    <PropertyValue Property="AllowedExpressions" String="SingleRange"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="DraftEntityLastChangeDateTime"/>
+                                    <PropertyValue Property="AllowedExpressions" String="SingleRange"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="NonFilterableProperties">
+                            <Collection>
+                                <PropertyPath>__EntityControl</PropertyPath>
+                                <PropertyPath>__OperationControl</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
                     </Record>
                 </Annotation>
-                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
-            </Annotations>
-            <Annotations Target="cds_zm_ui_movie_d.SAP__PDFHeader/Left" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-                <Annotation Term="SAP__common.ValueListReferences">
+                <Annotation Term="SAP__capabilities.SortRestrictions">
                     <Record>
-                        <PropertyValue Property="Url" String="./$metadata"/>
-                        <PropertyValue Property="CollectionPath" String="SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27HeaderFooter%27"/>
+                        <PropertyValue Property="NonSortableProperties">
+                            <Collection>
+                                <PropertyPath>__EntityControl</PropertyPath>
+                                <PropertyPath>__OperationControl</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
                     </Record>
                 </Annotation>
-                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
-            </Annotations>
-            <Annotations Target="cds_zm_ui_movie_d.SAP__PDFHeader/Right" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-                <Annotation Term="SAP__common.ValueListReferences">
+                <Annotation Term="SAP__capabilities.DeleteRestrictions">
                     <Record>
-                        <PropertyValue Property="Url" String="./$metadata"/>
-                        <PropertyValue Property="CollectionPath" String="SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27HeaderFooter%27"/>
+                        <PropertyValue Property="Deletable" Path="__EntityControl/Deletable"/>
                     </Record>
                 </Annotation>
-                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
-            </Annotations>
-            <Annotations Target="cds_zm_ui_movie_d.SAP__PDFHeader/Center" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-                <Annotation Term="SAP__common.ValueListReferences">
+                <Annotation Term="SAP__capabilities.UpdateRestrictions">
                     <Record>
-                        <PropertyValue Property="Url" String="./$metadata"/>
-                        <PropertyValue Property="CollectionPath" String="SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27HeaderFooter%27"/>
+                        <PropertyValue Property="Updatable" Path="__EntityControl/Updatable"/>
+                        <PropertyValue Property="NonUpdatableNavigationProperties">
+                            <Collection>
+                                <PropertyPath>DraftAdministrativeData</PropertyPath>
+                                <PropertyPath>SiblingEntity</PropertyPath>
+                                <PropertyPath>_Genre</PropertyPath>
+                                <PropertyPath>_MovieByGenre</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="QueryOptions">
+                            <Record>
+                                <PropertyValue Property="SelectSupported" Bool="true"/>
+                            </Record>
+                        </PropertyValue>
                     </Record>
                 </Annotation>
-                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
+                <Annotation Term="SAP__core.OptimisticConcurrency">
+                    <Collection/>
+                </Annotation>
             </Annotations>
-            <Annotations Target="cds_zm_ui_movie_d.SAP__PDFFooter/Left" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-                <Annotation Term="SAP__common.ValueListReferences">
+            <Annotations Target="SAP__self.Edit(SAP__self.ZMO_C_MOVIE_ADMIN_DType)">
+                <Annotation Term="SAP__core.OperationAvailable" Path="_it/__OperationControl/Edit"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZMO_C_MOVIE_ADMIN_DType">
+                <Annotation Term="SAP__common.Label" String="Movie Draft Projection View for Admins"/>
+                <Annotation Term="SAP__UI.Facets">
+                    <Collection>
+                        <Record Type="SAP__UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Movie"/>
+                            <PropertyValue Property="ID" String="Movie"/>
+                            <PropertyValue Property="Target" AnnotationPath="@SAP__UI.Identification"/>
+                        </Record>
+                        <Record Type="SAP__UI.ReferenceFacet">
+                            <PropertyValue Property="Label" String="Andere Filme des Genres"/>
+                            <PropertyValue Property="ID" String="Genre"/>
+                            <PropertyValue Property="Target" AnnotationPath="_MovieByGenre/@SAP__UI.LineItem"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__UI.Identification">
+                    <Collection>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Name"/>
+                            <PropertyValue Property="Value" Path="GenreName"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Title"/>
+                            <PropertyValue Property="Value" Path="Title"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="ReleaseYear"/>
+                            <PropertyValue Property="Value" Path="ReleaseYear"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Director"/>
+                            <PropertyValue Property="Value" Path="Director"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Genre"/>
+                            <PropertyValue Property="Value" Path="GenreId"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="LastChanged"/>
+                            <PropertyValue Property="Value" Path="LastChangedAt"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__UI.LineItem">
+                    <Collection>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Name"/>
+                            <PropertyValue Property="Value" Path="GenreName"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Title"/>
+                            <PropertyValue Property="Value" Path="Title"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="ReleaseYear"/>
+                            <PropertyValue Property="Value" Path="ReleaseYear"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Director"/>
+                            <PropertyValue Property="Value" Path="Director"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Genre"/>
+                            <PropertyValue Property="Value" Path="GenreId"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="LastChanged"/>
+                            <PropertyValue Property="Value" Path="LastChangedAt"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>Title</PropertyPath>
+                        <PropertyPath>GenreName</PropertyPath>
+                        <PropertyPath>Director</PropertyPath>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__common.Messages" Path="SAP__Messages"/>
+            </Annotations>
+            <Annotations Target="SAP__self.Container">
+                <Annotation Term="SAP__aggregation.ApplySupported">
                     <Record>
-                        <PropertyValue Property="Url" String="./$metadata"/>
-                        <PropertyValue Property="CollectionPath" String="SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27HeaderFooter%27"/>
+                        <PropertyValue Property="Transformations">
+                            <Collection>
+                                <String>aggregate</String>
+                                <String>groupby</String>
+                                <String>filter</String>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Rollup" EnumMember="SAP__aggregation.RollupType/None"/>
                     </Record>
                 </Annotation>
-                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
-            </Annotations>
-            <Annotations Target="cds_zm_ui_movie_d.SAP__PDFFooter/Right" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-                <Annotation Term="SAP__common.ValueListReferences">
+                <Annotation Term="SAP__common.ApplyMultiUnitBehaviorForSortingAndFiltering" Bool="true"/>
+                <Annotation Term="SAP__capabilities.FilterFunctions">
+                    <Collection>
+                        <String>eq</String>
+                        <String>ne</String>
+                        <String>gt</String>
+                        <String>ge</String>
+                        <String>lt</String>
+                        <String>le</String>
+                        <String>and</String>
+                        <String>or</String>
+                        <String>contains</String>
+                        <String>startswith</String>
+                        <String>endswith</String>
+                        <String>any</String>
+                        <String>all</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.SupportedFormats">
+                    <Collection>
+                        <String>application/json</String>
+                        <String>application/pdf</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__PDF.Features">
                     <Record>
-                        <PropertyValue Property="Url" String="./$metadata"/>
-                        <PropertyValue Property="CollectionPath" String="SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27HeaderFooter%27"/>
+                        <PropertyValue Property="DocumentDescriptionReference" String="../../../../default/iwbep/common/0001/$metadata"/>
+                        <PropertyValue Property="DocumentDescriptionCollection" String="MyDocumentDescriptions"/>
+                        <PropertyValue Property="ArchiveFormat" Bool="true"/>
+                        <PropertyValue Property="Border" Bool="true"/>
+                        <PropertyValue Property="CoverPage" Bool="true"/>
+                        <PropertyValue Property="FitToPage" Bool="true"/>
+                        <PropertyValue Property="FontName" Bool="true"/>
+                        <PropertyValue Property="FontSize" Bool="true"/>
+                        <PropertyValue Property="Margin" Bool="true"/>
+                        <PropertyValue Property="Padding" Bool="true"/>
+                        <PropertyValue Property="Signature" Bool="true"/>
+                        <PropertyValue Property="HeaderFooter" Bool="true"/>
+                        <PropertyValue Property="ResultSizeDefault" Int="20000"/>
+                        <PropertyValue Property="ResultSizeMaximum" Int="20000"/>
+                        <PropertyValue Property="IANATimezoneFormat" Bool="true"/>
+                        <PropertyValue Property="Treeview" Bool="true"/>
                     </Record>
                 </Annotation>
-                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
+                <Annotation Term="SAP__capabilities.KeyAsSegmentSupported"/>
+                <Annotation Term="SAP__capabilities.AsynchronousRequestsSupported"/>
             </Annotations>
-            <Annotations Target="cds_zm_ui_movie_d.SAP__PDFFooter/Center" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-                <Annotation Term="SAP__common.ValueListReferences">
-                    <Record>
-                        <PropertyValue Property="Url" String="./$metadata"/>
-                        <PropertyValue Property="CollectionPath" String="SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27HeaderFooter%27"/>
-                    </Record>
-                </Annotation>
-                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
+            <Annotations Target="SAP__self.I_DraftAdministrativeDataType/DraftUUID">
+                <Annotation Term="SAP__UI.Hidden"/>
+                <Annotation Term="SAP__common.Label" String="Draft (Technical ID)"/>
             </Annotations>
-            <Annotations Target="cds_zm_ui_movie_d.SAP__TableColumns/Format/Display_Format" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-                <Annotation Term="SAP__common.ValueListReferences">
-                    <Record>
-                        <PropertyValue Property="Url" String="./$metadata"/>
-                        <PropertyValue Property="CollectionPath" String="SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27TableColumnFormat%27"/>
-                    </Record>
-                </Annotation>
-                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
+            <Annotations Target="SAP__self.I_DraftAdministrativeDataType/ProcessingStartDateTime">
+                <Annotation Term="SAP__UI.Hidden"/>
+                <Annotation Term="SAP__common.Label" String="Draft In Process Since"/>
             </Annotations>
-            <Annotations Target="cds_zm_ui_movie_d.SAP__Format/Orientation" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-                <Annotation Term="SAP__common.ValueListReferences">
-                    <Record>
-                        <PropertyValue Property="Url" String="./$metadata"/>
-                        <PropertyValue Property="CollectionPath" String="SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27FontName%27"/>
-                    </Record>
-                </Annotation>
-                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
+            <Annotations Target="SAP__self.I_DraftAdministrativeDataType/DraftIsKeptByUser">
+                <Annotation Term="SAP__UI.Hidden"/>
+                <Annotation Term="SAP__common.Label" String="Draft Is Kept By User"/>
             </Annotations>
-            <Annotations Target="cds_zm_ui_movie_d.SAP__TableColumns/HorizontalAlignment" xmlns="http://docs.oasis-open.org/odata/ns/edm">
-                <Annotation Term="SAP__common.ValueListReferences">
-                    <Record>
-                        <PropertyValue Property="Url" String="./$metadata"/>
-                        <PropertyValue Property="CollectionPath" String="SAP__ValueHelpSet?$filter=VALUEHELP%20eq%20%27HorizontalAlignment%27"/>
-                    </Record>
-                </Annotation>
-                <Annotation Term="SAP__common.ValueListWithFixedValues"/>
+            <Annotations Target="SAP__self.I_DraftAdministrativeDataType/EnqueueStartDateTime">
+                <Annotation Term="SAP__UI.Hidden"/>
+                <Annotation Term="SAP__common.Label" String="Draft Locked Since"/>
             </Annotations>
-            <atom:link rel="self" href="https://6dee01da-3a16-487e-af06-448b429b9743.abap.eu10.hana.ondemand.com/sap/opu/odata/sap/ZM_UI_MOVIE_D_O2/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
-            <atom:link rel="latest-version" href="https://6dee01da-3a16-487e-af06-448b429b9743.abap.eu10.hana.ondemand.com/sap/opu/odata/sap/ZM_UI_MOVIE_D_O2/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/>
+            <Annotations Target="SAP__self.I_DraftAdministrativeDataType/DraftIsCreatedByMe">
+                <Annotation Term="SAP__UI.Hidden"/>
+                <Annotation Term="SAP__common.Label" String="Draft Created By Me"/>
+            </Annotations>
+            <Annotations Target="SAP__self.I_DraftAdministrativeDataType/DraftIsLastChangedByMe">
+                <Annotation Term="SAP__UI.Hidden"/>
+                <Annotation Term="SAP__common.Label" String="Draft Last Changed By Me"/>
+            </Annotations>
+            <Annotations Target="SAP__self.I_DraftAdministrativeDataType/DraftIsProcessedByMe">
+                <Annotation Term="SAP__UI.Hidden"/>
+                <Annotation Term="SAP__common.Label" String="Draft In Process By Me"/>
+            </Annotations>
+            <Annotations Target="SAP__self.I_DraftAdministrativeDataType/CreatedByUserDescription">
+                <Annotation Term="SAP__UI.Hidden"/>
+                <Annotation Term="SAP__common.Label" String="Draft Created By (Description)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.I_DraftAdministrativeDataType/LastChangedByUserDescription">
+                <Annotation Term="SAP__UI.Hidden"/>
+                <Annotation Term="SAP__common.Label" String="Draft Last Changed By (Description)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.I_DraftAdministrativeDataType/InProcessByUserDescription">
+                <Annotation Term="SAP__UI.Hidden"/>
+                <Annotation Term="SAP__common.Label" String="Draft In Process By (Description)"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZMO_C_MOVIE_ADMIN_DType/GenreName">
+                <Annotation Term="SAP__UI.Hidden"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZMO_I_GENREType/__EntityControl/Deletable">
+                <Annotation Term="SAP__common.Label" String="Dyn. Method Control"/>
+                <Annotation Term="SAP__common.Heading" String="Dynamic Method Control"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Dynamic Method Property"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZMO_I_GENREType/__EntityControl/Updatable">
+                <Annotation Term="SAP__common.Label" String="Dyn. Method Control"/>
+                <Annotation Term="SAP__common.Heading" String="Dynamic Method Control"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Dynamic Method Property"/>
+            </Annotations>
+            <Annotations Target="SAP__self.I_DraftAdministrativeDataType/CreationDateTime">
+                <Annotation Term="SAP__common.Label" String="Draft Created On"/>
+            </Annotations>
+            <Annotations Target="SAP__self.I_DraftAdministrativeDataType/LastChangeDateTime">
+                <Annotation Term="SAP__common.Label" String="Draft Last Changed On"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZMO_C_MOVIE_ADMIN_DType/__EntityControl/Deletable">
+                <Annotation Term="SAP__common.Label" String="Dyn. Method Control"/>
+                <Annotation Term="SAP__common.Heading" String="Dynamic Method Control"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Dynamic Method Property"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZMO_C_MOVIE_ADMIN_DType/__EntityControl/Updatable">
+                <Annotation Term="SAP__common.Label" String="Dyn. Method Control"/>
+                <Annotation Term="SAP__common.Heading" String="Dynamic Method Control"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Dynamic Method Property"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZMO_C_MOVIE_ADMIN_DType/__OperationControl/Edit">
+                <Annotation Term="SAP__common.Label" String="Dyn. Action Control"/>
+                <Annotation Term="SAP__common.Heading" String="Dynamic Action Control"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Dynamic Action Property"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZMO_C_MOVIE_ADMIN_DOperationControl/Edit">
+                <Annotation Term="SAP__common.Label" String="Dyn. Action Control"/>
+                <Annotation Term="SAP__common.Heading" String="Dynamic Action Control"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Dynamic Action Property"/>
+            </Annotations>
+            <Annotations Target="SAP__self.EntityControl/Deletable">
+                <Annotation Term="SAP__common.Label" String="Dyn. Method Control"/>
+                <Annotation Term="SAP__common.Heading" String="Dynamic Method Control"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Dynamic Method Property"/>
+            </Annotations>
+            <Annotations Target="SAP__self.EntityControl/Updatable">
+                <Annotation Term="SAP__common.Label" String="Dyn. Method Control"/>
+                <Annotation Term="SAP__common.Heading" String="Dynamic Method Control"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Dynamic Method Property"/>
+            </Annotations>
+            <Annotations Target="SAP__self.Edit(SAP__self.ZMO_C_MOVIE_ADMIN_DType)/PreserveChanges">
+                <Annotation Term="SAP__common.Label" String="TRUE"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Data element for domain BOOLE: TRUE (='X') and FALSE (=' ')"/>
+            </Annotations>
         </Schema>
     </edmx:DataServices>
 </edmx:Edmx>

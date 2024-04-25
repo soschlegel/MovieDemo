@@ -1,12 +1,11 @@
 {
-    "version": "0.2.0",
     "configurations": [
         {
             "name": "Start movie_draft",
             "type": "node",
             "request": "launch",
             "runtimeExecutable": "npx",
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}/apps\\movie_draft",
             "windows": {
                 "runtimeExecutable": "npx.cmd"
             },
@@ -31,7 +30,7 @@
             "name": "Start movie_draft Mock",
             "type": "node",
             "request": "launch",
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}/apps\\movie_draft",
             "runtimeExecutable": "npx",
             "windows": {
                 "runtimeExecutable": "npx.cmd"
@@ -58,7 +57,7 @@
             "name": "Start movie_draft Local",
             "type": "node",
             "request": "launch",
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}/apps\\movie_draft",
             "runtimeExecutable": "npx",
             "windows": {
                 "runtimeExecutable": "npx.cmd"
@@ -81,5 +80,6 @@
                 "FIORI_TOOLS_URL_PARAMS": "sap-ui-xx-viewCache=false"
             }
         }
-    ]
+    ],
+    "compounds": []
 }

@@ -30,7 +30,7 @@ server:
       configuration:
         mountPath: /
         services:
-          - urlPath: /sap/opu/odata/sap/ZM_UI_MOVIE_D_O2
+          - urlPath: /sap/opu/odata4/sap/zm_ui_movie_d_o4/srvd/sap/zm_ui_movie_d/0001
             metadataPath: ./webapp/localService/metadata.xml
             mockdataPath: ./webapp/localService/data
             generateMockData: true

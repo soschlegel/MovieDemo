@@ -8,8 +8,8 @@
     <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Communication.xml">
         <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
     </edmx:Reference>
-    <edmx:Reference Uri="/sap/opu/odata/sap/ZM_UI_MOVIE_D_O2/$metadata">
-        <edmx:Include Namespace="cds_zm_ui_movie_d"/>
+    <edmx:Reference Uri="/sap/opu/odata4/sap/zm_ui_movie_d_o4/srvd/sap/zm_ui_movie_d/0001/$metadata">
+        <edmx:Include Namespace="com.sap.gateway.srvd.zm_ui_movie_d.v0001" Alias="SAP__self"/>
     </edmx:Reference>
     <edmx:DataServices>
         <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="local">

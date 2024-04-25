@@ -1,15 +1,15 @@
 ## Application Details
 |               |
 | ------------- |
-|**Generation Date and Time**<br>Thu Apr 25 2024 12:57:49 GMT+0200 (Mitteleuropäische Sommerzeit)|
+|**Generation Date and Time**<br>Thu Apr 25 2024 16:05:15 GMT+0200 (Mitteleuropäische Sommerzeit)|
 |**App Generator**<br>@sap/generator-fiori-elements|
 |**App Generator Version**<br>1.13.2|
 |**Generation Platform**<br>Visual Studio Code|
-|**Template Used**<br>List Report Page V2|
+|**Template Used**<br>List Report Page V4|
 |**Service Type**<br>SAP System (ABAP Environment on SAP Business Technology Platform)|
-|**Service URL**<br>https://6dee01da-3a16-487e-af06-448b429b9743.abap.eu10.hana.ondemand.com/sap/opu/odata/sap/ZM_UI_MOVIE_D_O2
+|**Service URL**<br>https://6dee01da-3a16-487e-af06-448b429b9743.abap.eu10.hana.ondemand.com/sap/opu/odata4/sap/zm_ui_movie_d_o4/srvd/sap/zm_ui_movie_d/0001/
 |**Module Name**<br>movie_draft|
-|**Application Title**<br>Movie Draft|
+|**Application Title**<br>Movies mit Draft|
 |**Namespace**<br>com.demo|
 |**UI5 Theme**<br>sap_horizon|
 |**UI5 Version**<br>1.120.10|
@@ -21,7 +21,7 @@
 
 ## movie_draft
 
-Movies with Draft
+Draft-Movies
 
 ### Starting the generated app
 
