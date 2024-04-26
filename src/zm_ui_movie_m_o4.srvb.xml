@@ -4,9 +4,9 @@
   <asx:values>
    <SRVB>
     <METADATA>
-     <NAME>ZM_UI_MOVIE_D_O2</NAME>
+     <NAME>ZM_UI_MOVIE_M_O4</NAME>
      <TYPE>SRVB/SVB</TYPE>
-     <DESCRIPTION>UI Service for Draft Movie</DESCRIPTION>
+     <DESCRIPTION>V4 ohne Draft</DESCRIPTION>
      <LANGUAGE>EN</LANGUAGE>
      <LINKS>
       <item>
@@ -15,10 +15,10 @@
        <TITLE>Historic versions</TITLE>
       </item>
       <item>
-       <HREF>/sap/bc/adt/businessservices/odatav2/ZM_UI_MOVIE_D_O2</HREF>
-       <REL>http://www.sap.com/categories/odatav2</REL>
-       <TYPE>application/vnd.sap.adt.businessservices.odatav2.v2+xml</TYPE>
-       <TITLE>ODATAV2</TITLE>
+       <HREF>/sap/bc/adt/businessservices/odatav4/ZM_UI_MOVIE_M_O4</HREF>
+       <REL>http://www.sap.com/categories/odatav4</REL>
+       <TYPE>application/vnd.sap.adt.businessservices.odatav4.v1+xml</TYPE>
+       <TITLE>ODATAV4</TITLE>
       </item>
       <item>
        <HREF>/sap/bc/adt/businessservices/testclass</HREF>
@@ -39,7 +39,7 @@
        <TITLE>SemanticVersion</TITLE>
       </item>
       <item>
-       <HREF>./zm_ui_movie_d_o2</HREF>
+       <HREF>./zm_ui_movie_m_o4</HREF>
        <REL>http://www.sap.com/adt/relations/source</REL>
        <TYPE>text/html</TYPE>
        <TITLE>Landing Page (HTML)</TITLE>
@@ -50,22 +50,21 @@
     </METADATA>
     <CONTENT>
      <BIND_TYPE_IMPL>
-      <NAME>ZM_UI_MOVIE_D_O2</NAME>
+      <NAME>ZM_UI_MOVIE_M_O4</NAME>
      </BIND_TYPE_IMPL>
      <BIND_TYPE>ODATA</BIND_TYPE>
-     <BIND_TYPE_VERSION>V2</BIND_TYPE_VERSION>
+     <BIND_TYPE_VERSION>V4</BIND_TYPE_VERSION>
      <SERVICES>
       <item>
-       <SERVICE_NAME>ZM_UI_MOVIE_D_O2</SERVICE_NAME>
+       <SERVICE_NAME>ZMO_UI_MOVIE_M</SERVICE_NAME>
        <SERVICE_CONTENT>
         <item>
          <SERVICE_VERSION>0001</SERVICE_VERSION>
-         <SERVICE_PATCH_VERSION>1</SERVICE_PATCH_VERSION>
          <RELEASE_STATE>NOT_RELEASED</RELEASE_STATE>
          <SRVD_REF>
-          <URI>/sap/bc/adt/ddic/srvd/sources/zm_ui_movie_d</URI>
+          <URI>/sap/bc/adt/ddic/srvd/sources/zmo_ui_movie_m</URI>
           <TYPE>SRVD/SRV</TYPE>
-          <NAME>ZM_UI_MOVIE_D</NAME>
+          <NAME>ZMO_UI_MOVIE_M</NAME>
          </SRVD_REF>
          <BIND_TYPE_DATA>
           <CONTENT>
@@ -79,6 +78,7 @@
     </CONTENT>
     <CONTRACT>C1</CONTRACT>
     <RELEASE_SUPPORTED>true</RELEASE_SUPPORTED>
+    <PUBLISHED>true</PUBLISHED>
     <BINDING_CREATED>true</BINDING_CREATED>
    </SRVB>
   </asx:values>

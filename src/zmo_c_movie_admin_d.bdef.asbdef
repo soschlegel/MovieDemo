@@ -1,12 +1,17 @@
 projection;
 strict ( 2 );
+// ##SIDE
+//use side effects;
 use draft;
 
-define behavior for ZMO_C_MOVIE_ADMIN_D alias MovieDraftAdmin
+define behavior for ZMO_C_MOVIE_ADMIN_D alias Movie
 {
   use create;
   use update;
   use delete;
+
+  // ##ACTION
+  use action checkInput;
 
   use action Resume;
   use action Edit;

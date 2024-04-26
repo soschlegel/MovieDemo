@@ -51,16 +51,16 @@ CLASS zmo_lsc_create_db_values IMPLEMENTATION.
           release_year = '2001'
           director     = 'Peter Jackson'
           genre_id     = '5' )
-        ( guid =  system_uuid->create_uuid_x16( )  title = 'Pulp Fiction' release_year = '1994' director = 'Quentin Tarantino' genre_id = '6' )
-        ( guid =  system_uuid->create_uuid_x16( )  title = 'Matrix' release_year = '1999' director = 'Lana Wachowski' genre_id = '4' )
-        ( guid =  system_uuid->create_uuid_x16( )  title = 'Forrest Gump' release_year = '1994' director = 'Robert Zemeckis' genre_id = '3' )
-        ( guid =  system_uuid->create_uuid_x16( )  title = 'The Dark Knight' release_year = '2008' director = 'Christopher Nolan' genre_id = '1' )
-        ( guid =  system_uuid->create_uuid_x16( )  title = 'Fight Club' release_year = '1999' director = 'David Fincher' genre_id = '3' )
-        ( guid =  system_uuid->create_uuid_x16( )  title = 'Star Wars: Episode IV - Eine neue Hoffnung' release_year = '1977' director = 'George Lucas' genre_id = '4' )
-*        ( id = '9' title = 'Inglourious Basterds' release_year = '2009' director = 'Quentin Tarantino' genre_id = '7' )
-*        ( id = '10' title = 'The Shawshank Redemption' release_year = '1994' director = 'Frank Darabont' genre_id = '3' )
-*        ( id = '11' title = 'Hangover' release_year = '2009' director = 'Todd Phillips' genre_id = '2' )
-*        ( id = '12' title = 'Good Boys' release_year = '2019' director = 'Gene Stupnitsky' genre_id = '2' ) ).
+        ( guid =  system_uuid->create_uuid_x16( ) title = 'Pulp Fiction' release_year = '1994' director = 'Quentin Tarantino' genre_id = '6' )
+        ( guid =  system_uuid->create_uuid_x16( ) title = 'Matrix' release_year = '1999' director = 'Lana Wachowski' genre_id = '4' )
+        ( guid =  system_uuid->create_uuid_x16( ) title = 'Forrest Gump' release_year = '1994' director = 'Robert Zemeckis' genre_id = '3' )
+        ( guid =  system_uuid->create_uuid_x16( ) title = 'The Dark Knight' release_year = '2008' director = 'Christopher Nolan' genre_id = '1' )
+        ( guid =  system_uuid->create_uuid_x16( ) title = 'Fight Club' release_year = '1999' director = 'David Fincher' genre_id = '3' )
+        ( guid =  system_uuid->create_uuid_x16( ) title = 'Star Wars: Episode IV - Eine neue Hoffnung' release_year = '1977' director = 'George Lucas' genre_id = '4' )
+        ( guid = system_uuid->create_uuid_x16( ) title = 'Inglourious Basterds' release_year = '2009' director = 'Quentin Tarantino' genre_id = '7' )
+        ( guid = system_uuid->create_uuid_x16( ) title = 'The Shawshank Redemption' release_year = '1994' director = 'Frank Darabont' genre_id = '3' )
+        ( guid = system_uuid->create_uuid_x16( ) title = 'Hangover' release_year = '2009' director = 'Todd Phillips' genre_id = '2' )
+        ( guid = system_uuid->create_uuid_x16( ) title = 'Good Boys' release_year = '2019' director = 'Gene Stupnitsky' genre_id = '2' )
 ).
     INSERT zmo_a_movie FROM TABLE @lt_movies.
     i_out->write( |=======Movie Data added===========| ).

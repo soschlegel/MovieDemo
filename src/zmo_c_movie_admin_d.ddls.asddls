@@ -54,16 +54,18 @@ define root view entity ZMO_C_MOVIE_ADMIN_D
       @Search.fuzzinessThreshold: 0.8
       Director,
       @UI: {
-          lineItem:       [ { position: 50, label: 'GenreId', importance: #HIGH } ],
-          identification: [ { position: 50, label: 'GenreId' } ],
-          selectionField: [ { position: 3 } ] }
+          lineItem:       [ { position: 50, label: 'Genre', importance: #HIGH } ],
+          identification: [ { position: 50, label: 'Genre' } ]
+      //          selectionField: [ { position: 3 } ]
+        }
       @Consumption.valueHelpDefinition: [{
-        entity: { name: 'ZMO_I_GENRE', element: 'Id' },
-        useForValidation: true
+        entity: { name: 'ZMO_I_GENRE', element: 'Id' }
+//        ##HELP
+//        ,useForValidation: true        
       }]
       @ObjectModel.text.element: ['GenreName']
       @UI.textArrangement: #TEXT_ONLY
-      @Search.defaultSearchElement: true
+      //      @Search.defaultSearchElement: true
       GenreId,
       @UI.hidden: true
       GenreName,

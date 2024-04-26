@@ -8,18 +8,23 @@ authorization master ( instance )
 
 //etag master <field_name>
 {
-  field ( numbering : managed, readonly  ) Guid;
+  create;
+  update;
+  delete;
+
+  field ( numbering : managed, readonly ) Guid;
   field ( readonly ) LastChangedAt;
+
+  validation checkGenre on save { create; update; }
+
   mapping for zmo_a_movie corresponding
     {
-    Guid = guid;
+      Guid          = guid;
       ReleaseYear   = release_year;
       Title         = title;
       Director      = director;
       GenreId       = genre_id;
       LastChangedAt = last_changed_at;
     }
-  create;
-  update;
-  delete;
+
 }

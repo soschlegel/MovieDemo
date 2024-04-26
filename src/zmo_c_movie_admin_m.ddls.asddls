@@ -65,8 +65,9 @@ define root view entity ZMO_C_MOVIE_ADMIN_M
       @UI.textArrangement: #TEXT_ONLY
       @Consumption.valueHelpDefinition: [{
         entity:
-            { name: 'ZMO_I_GENRE', element: 'Id' },
-        useForValidation: true
+            { name: 'ZMO_I_GENRE', element: 'Id' }
+      // ##SEARCH
+      //        ,useForValidation: true
       }]
       GenreId,
       _Genre.Name as GenreName,

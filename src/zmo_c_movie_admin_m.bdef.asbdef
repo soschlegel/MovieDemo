@@ -1,7 +1,7 @@
 projection;
 strict ( 2 );
 
-define behavior for ZMO_C_MOVIE_ADMIN_M //alias <alias_name>
+define behavior for ZMO_C_MOVIE_ADMIN_M alias Movie
 {
   use create;
   use update;

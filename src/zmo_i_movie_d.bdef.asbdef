@@ -2,7 +2,7 @@ managed;
 strict ( 2 );
 with draft;
 
-define behavior for ZMO_I_MOVIE_D alias MovieD
+define behavior for ZMO_I_MOVIE_D alias Movie
 implementation in class zbp_mo_i_movie_d unique
 persistent table zmo_a_movie
 draft table zmo_d_movie_d
@@ -14,9 +14,25 @@ etag master LastChangedAt
   field ( numbering : managed, readonly ) Guid;
   field ( readonly ) LastChangedAt;
 
-  create;
-  update;
+  //  create;
+  //  update;
+
+  create ( precheck );
+  update ( precheck );
   delete;
+
+  validation checkGenre on save { create; update; }
+
+  // ##ACTION
+  determine action checkInput
+  {
+    validation ( always ) checkGenre;
+  }
+
+  side effects
+  {
+    determine action checkInput executed on field GenreId affects $self;
+  }
 
   mapping for zmo_a_movie corresponding
     {
@@ -27,8 +43,7 @@ etag master LastChangedAt
       LastChangedAt = last_changed_at;
     }
 
-
-  draft action Resume with additional implementation;
+  draft action Resume;
   draft action Edit;
   draft action Activate optimized;
   draft action Discard;
