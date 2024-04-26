@@ -106,6 +106,7 @@
                 <NavigationProperty Name="_MovieByGenre" Type="Collection(com.sap.gateway.srvd.zm_ui_movie_d.v0001.ZMO_C_MOVIE_ADMIN_DType)"/>
             </EntityType>
             <ComplexType Name="ZMO_C_MOVIE_ADMIN_DOperationControl">
+                <Property Name="checkInput" Type="Edm.Boolean" Nullable="false"/>
                 <Property Name="Edit" Type="Edm.Boolean" Nullable="false"/>
             </ComplexType>
             <ComplexType Name="EntityControl">
@@ -133,6 +134,9 @@
             <Action Name="Activate" EntitySetPath="_it" IsBound="true">
                 <Parameter Name="_it" Type="com.sap.gateway.srvd.zm_ui_movie_d.v0001.ZMO_C_MOVIE_ADMIN_DType" Nullable="false"/>
                 <ReturnType Type="com.sap.gateway.srvd.zm_ui_movie_d.v0001.ZMO_C_MOVIE_ADMIN_DType" Nullable="false"/>
+            </Action>
+            <Action Name="checkInput" IsBound="true">
+                <Parameter Name="_it" Type="com.sap.gateway.srvd.zm_ui_movie_d.v0001.ZMO_C_MOVIE_ADMIN_DType" Nullable="false"/>
             </Action>
             <Action Name="Edit" EntitySetPath="_it" IsBound="true">
                 <Parameter Name="_it" Type="com.sap.gateway.srvd.zm_ui_movie_d.v0001.ZMO_C_MOVIE_ADMIN_DType" Nullable="false"/>
@@ -340,7 +344,6 @@
                 <Annotation Term="SAP__common.Text" Path="GenreName">
                     <Annotation Term="SAP__UI.TextArrangement" EnumMember="SAP__UI.TextArrangementType/TextOnly"/>
                 </Annotation>
-                <Annotation Term="SAP__common.ValueListForValidation" String=""/>
                 <Annotation Term="SAP__common.ValueListReferences">
                     <Collection>
                         <String>../../../../srvd_f4/sap/zmo_i_genre/0001;ps='srvd-zm_ui_movie_d-0001';va='com.sap.gateway.srvd.zm_ui_movie_d.v0001.et-zmo_c_movie_admin_d.genreid'/$metadata</String>
@@ -493,6 +496,9 @@
                 <Annotation Term="SAP__core.OptimisticConcurrency">
                     <Collection/>
                 </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.checkInput(SAP__self.ZMO_C_MOVIE_ADMIN_DType)">
+                <Annotation Term="SAP__core.OperationAvailable" Path="_it/__OperationControl/checkInput"/>
             </Annotations>
             <Annotations Target="SAP__self.Edit(SAP__self.ZMO_C_MOVIE_ADMIN_DType)">
                 <Annotation Term="SAP__core.OperationAvailable" Path="_it/__OperationControl/Edit"/>
@@ -708,7 +714,17 @@
                 <Annotation Term="SAP__common.Heading" String="Dynamic Method Control"/>
                 <Annotation Term="SAP__common.QuickInfo" String="Dynamic Method Property"/>
             </Annotations>
+            <Annotations Target="SAP__self.ZMO_C_MOVIE_ADMIN_DType/__OperationControl/checkInput">
+                <Annotation Term="SAP__common.Label" String="Dyn. Action Control"/>
+                <Annotation Term="SAP__common.Heading" String="Dynamic Action Control"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Dynamic Action Property"/>
+            </Annotations>
             <Annotations Target="SAP__self.ZMO_C_MOVIE_ADMIN_DType/__OperationControl/Edit">
+                <Annotation Term="SAP__common.Label" String="Dyn. Action Control"/>
+                <Annotation Term="SAP__common.Heading" String="Dynamic Action Control"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Dynamic Action Property"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZMO_C_MOVIE_ADMIN_DOperationControl/checkInput">
                 <Annotation Term="SAP__common.Label" String="Dyn. Action Control"/>
                 <Annotation Term="SAP__common.Heading" String="Dynamic Action Control"/>
                 <Annotation Term="SAP__common.QuickInfo" String="Dynamic Action Property"/>

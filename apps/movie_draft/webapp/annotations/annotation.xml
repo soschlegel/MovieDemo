@@ -13,6 +13,18 @@
     </edmx:Reference>
     <edmx:DataServices>
         <Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="local">
+            <Annotations Target="SAP__self.ZMO_C_MOVIE_ADMIN_DType">
+                <!-- <Annotation Term="Common.SideEffects" Qualifier="validateGenre">
+                    <Record Type="Common.SideEffectsType">
+                        <PropertyValue Property="SourceProperties">
+                            <Collection>
+                                <PropertyPath>GenreId</PropertyPath>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="TriggerAction" String="com.sap.gateway.srvd.zm_ui_movie_d.v0001.checkInput"/>  
+                    </Record>
+                </Annotation> -->
+            </Annotations>
         </Schema>
     </edmx:DataServices>
 </edmx:Edmx>
